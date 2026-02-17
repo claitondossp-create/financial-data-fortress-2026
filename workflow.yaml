@@ -1,0 +1,15 @@
+pipeline_workflow:
+  name: FinancialDataFortress_2026
+  steps:
+    - step: 1_BRONZE_AUDIT
+      action: "Executar profiling estatístico no CSV original para detectar caracteres invisíveis."
+    - step: 2_SILVER_TRANSFORM
+      action: "Aplicar Regex para limpeza de moedas e conversão para ISO-8601."
+      depends_on: 1_BRONZE_AUDIT
+    - step: 3_GOLD_MODELING
+      action: "Gerar Surrogate Keys e estruturar Fato_Financeiro em Star Schema."
+      depends_on: 2_SILVER_TRANSFORM
+    - step: 4_CONTRACT_CHECK
+      action: "Validar saída final contra o esquema Pydantic para evitar Schema Drift."
+    - step: 5_ENCRYPTION_LOG
+      action: "Criptografar métricas sensíveis e gerar log forense de execução."

@@ -1,0 +1,19 @@
+{
+  "agent_behavior_rules": [
+    {
+      "id": "RULE_STRICT_GROUNDING",
+      "description": "O agente não pode sugerir transformações baseadas em conhecimento externo. Use apenas o guia de 'Arquitetura medalhão' fornecido.",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "RULE_SECURITY_FIRST",
+      "description": "Campos de 'Manufacturing Price' e 'COGS' nunca devem ser exibidos em texto plano nos logs. Exigir criptografia AES-256.",
+      "severity": "MANDATORY"
+    },
+    {
+      "id": "RULE_INDIAN_NUM_SYSTEM",
+      "description": "Sempre tratar vírgulas extras como separadores de Lakhs/Crores conforme a Fase 2.",
+      "severity": "HIGH"
+    }
+  ]
+}

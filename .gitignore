@@ -1,0 +1,72 @@
+# Security Keys (CRÍTICO: NÃO COMMITAR!)
+security/master.key
+security/salt.key
+security/*.key
+
+# Outputs do pipeline
+outputs/quarantine/*.csv
+outputs/reports/*.md
+outputs/alerts/*.json
+
+# Metadata
+metadata/*.db
+metadata/*.sqlite
+
+# Audit logs
+audit_logs/*.json
+
+# Dados gerados
+data/silver/*.csv
+data/gold/*.csv
+gold_layer/*.csv
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+.cache/
