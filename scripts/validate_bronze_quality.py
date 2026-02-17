@@ -30,8 +30,8 @@ import json
 # CONFIGURAÇÕES GLOBAIS
 # ========================================
 
-CAMINHO_CSV = "Financials.csv"
-CAMINHO_QUARENTENA = "quarantine/bronze_failed_{timestamp}.csv"
+CAMINHO_CSV = "data/01_bronze/Financials.csv"
+CAMINHO_QUARENTENA = "outputs/quarantine/bronze_failed_{timestamp}.csv"
 
 # 16 Colunas obrigatórias conforme documentação
 COLUNAS_OBRIGATORIAS = [
@@ -509,13 +509,13 @@ class BronzeQualityValidator:
         
         # Criar diretório de quarentena se não existir
         import os
-        os.makedirs('quarantine', exist_ok=True)
+        os.makedirs('outputs/quarantine', exist_ok=True)
         
         # Salvar lote falhado
         self.df.to_csv(caminho_quarentena, index=False)
         
         # Salvar relatório JSON
-        caminho_relatorio = f"quarantine/report_{timestamp}.json"
+        caminho_relatorio = f"outputs/quarantine/report_{timestamp}.json"
         with open(caminho_relatorio, 'w', encoding='utf-8') as f:
             json.dump(self.resultados, f, indent=2, ensure_ascii=False)
         
@@ -539,10 +539,10 @@ class BronzeQualityValidator:
         print(f"\n🚀 Lote aprovado para ingestão na Camada Silver\n")
         
         # Salvar relatório de sucesso
-        caminho_sucesso = f"validation_reports/success_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        caminho_sucesso = f"outputs/reports/validation_success_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         
         import os
-        os.makedirs('validation_reports', exist_ok=True)
+        os.makedirs('outputs/reports', exist_ok=True)
         
         with open(caminho_sucesso, 'w', encoding='utf-8') as f:
             json.dump(self.resultados, f, indent=2, ensure_ascii=False)
