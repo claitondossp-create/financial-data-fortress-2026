@@ -27,8 +27,8 @@ import sys
 # CONFIGURAÇÕES GLOBAIS
 # ========================================
 
-CAMINHO_SILVER = "Financials_Silver.csv"
-DIRETORIO_GOLD = "gold_layer"
+CAMINHO_SILVER = "data/02_silver/Financials_Silver.csv"
+DIRETORIO_GOLD = "data/03_gold"
 
 # ========================================
 # MÓDULO 1: DIMENSÃO PRODUTO

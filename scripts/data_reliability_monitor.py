@@ -19,10 +19,10 @@ GROUNDING SOURCE:
 
 import pandas as pd
 import numpy as np
-from pydantic import BaseModel, Field, validator, root_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 from decimal import Decimal
 from datetime import datetime, date, timedelta
-from typing import Optional, Literal
+from typing import Optional, Literal, Union
 import sqlite3
 import json
 import sys
@@ -32,9 +32,9 @@ from pathlib import Path
 # CONFIGURAÇÕES GLOBAIS
 # ========================================
 
-CAMINHO_DADOS = "Financials_Silver.csv"
+CAMINHO_DADOS = "data/02_silver/Financials_Silver.csv"
 CAMINHO_METADATA_DB = "metadata/incremental_load.db"
-CAMINHO_ALERTAS = "alerts/anomalies_{timestamp}.json"
+CAMINHO_ALERTAS = "outputs/alerts/anomalies_{timestamp}.json"
 
 # ========================================
 # MÓDULO 1: DATA CONTRACT (Pydantic)
@@ -140,7 +140,7 @@ class FinancialRecordContract(BaseModel):
         description="Lucro operacional (pode ser negativo)"
     )
     
-    date: str = Field(
+    date: Union[str, datetime] = Field(
         ...,
         description="Data da transação (YYYY-MM-DD)"
     )
@@ -168,11 +168,13 @@ class FinancialRecordContract(BaseModel):
     # VALIDADORES DE NEGÓCIO (REGRAS CRÍTICAS)
     # ========================================
     
-    @validator('sales')
-    def validar_sales(cls, v, values):
+    @field_validator('sales')
+    @classmethod
+    def validar_sales(cls, v, info):
         """
         REGRA 1: Sales = Gross Sales - Discounts
         """
+        values = info.data
         if 'gross_sales' in values and 'discounts' in values:
             esperado = values['gross_sales'] - values['discounts']
             if abs(v - esperado) > 0.01:  # Tolerância de 1 centavo
@@ -182,11 +184,13 @@ class FinancialRecordContract(BaseModel):
                 )
         return v
     
-    @validator('profit')
-    def validar_profit(cls, v, values):
+    @field_validator('profit')
+    @classmethod
+    def validar_profit(cls, v, info):
         """
         REGRA 2: Profit = Sales - COGS
         """
+        values = info.data
         if 'sales' in values and 'cogs' in values:
             esperado = values['sales'] - values['cogs']
             if abs(v - esperado) > 0.01:
@@ -196,28 +200,33 @@ class FinancialRecordContract(BaseModel):
                 )
         return v
     
-    @validator('date')
+    @field_validator('date', mode='before')
+    @classmethod
     def validar_formato_data(cls, v):
         """
         REGRA 3: Data deve estar em formato ISO-8601 (YYYY-MM-DD)
+        Aceita datetime/Timestamp e converte para string.
         """
+        if isinstance(v, (datetime, pd.Timestamp)):
+            return v.strftime('%Y-%m-%d')
+            
         try:
             datetime.strptime(v, '%Y-%m-%d')
         except ValueError:
             raise ValueError(f"Data inválida '{v}'. Formato esperado: YYYY-MM-DD")
         return v
     
-    @root_validator
-    def validar_desconto_coerente(cls, values):
+    @model_validator(mode='after')
+    def validar_desconto_coerente(self):
         """
         REGRA 4: Se discount_band = 'None', desconto deve ser 0
         """
-        if values.get('discount_band') == 'None':
-            if values.get('discounts', 0) > 0.01:
+        if self.discount_band == 'None':
+            if self.discounts > 0.01:
                 raise ValueError(
-                    f"Inconsistência: discount_band='None' mas discounts={values['discounts']}"
+                    f"Inconsistência: discount_band='None' mas discounts={self.discounts}"
                 )
-        return values
+        return self
     
     class Config:
         """Configurações do modelo Pydantic."""
@@ -502,7 +511,15 @@ class AnomalyDetector:
             print("   ⚠️ WARNING: Baseline não calculado. Use calcular_baseline_sazonal() primeiro.\n")
             return pd.DataFrame()
         
+        # DEBUG: Inspecionar colunas
+        print(f"   DEBUG: Colunas disponíveis para detecção: {df.columns.tolist()}")
+        if 'date' not in df.columns:
+            print("   ⚠️ ERRO CRÍTICO: Coluna 'date' não encontrada em df_valido!")
+            print(f"   Amostra: {df.head(1).to_dict(orient='records')}")
+            return pd.DataFrame()
+
         # Preparar dados
+        df = df.copy()  # Garantir cópia para evitar warnings
         df['date'] = pd.to_datetime(df['date'])
         df['trimestre'] = df['date'].dt.quarter
         
@@ -631,9 +648,9 @@ class AnomalyDetector:
             alertas.append(alerta)
         
         # Salvar JSON
-        Path("alerts").mkdir(exist_ok=True)
+        Path("outputs/alerts").mkdir(parents=True, exist_ok=True)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        caminho_relatorio = f"alerts/anomalies_{timestamp}.json"
+        caminho_relatorio = f"outputs/alerts/anomalies_{timestamp}.json"
         
         with open(caminho_relatorio, 'w', encoding='utf-8') as f:
             json.dump({
@@ -710,9 +727,9 @@ class DataReliabilityMonitor:
         
         # Se há registros inválidos, logar
         if len(df_invalido) > 0:
-            Path("quarantine").mkdir(exist_ok=True)
+            Path("outputs/quarantine").mkdir(parents=True, exist_ok=True)
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            caminho_quarentena = f"quarantine/contract_violations_{timestamp}.csv"
+            caminho_quarentena = f"outputs/quarantine/contract_violations_{timestamp}.csv"
             df_invalido.to_csv(caminho_quarentena, index=False)
             
             print(f"   ⚠️ {len(df_invalido)} registros enviados para quarentena: {caminho_quarentena}\n")

@@ -622,6 +622,7 @@ if __name__ == "__main__":
     # Dados de exemplo
     df_producao = pd.DataFrame({
         'product': ['Carretera', 'Montana'],
+        'country': ['United States of America', 'Canada'],
         'manufacturing_price': [3.00, 5.00],
         'cogs': [16185.00, 21780.00],
         'profit': [16185.00, 21780.00]
@@ -668,8 +669,8 @@ if __name__ == "__main__":
     print("=" * 80 + "\n")
     
     # Salvar dataset criptografado
-    caminho_gold = "gold_layer/fato_financeiro_ENCRYPTED.csv"
-    Path("gold_layer").mkdir(exist_ok=True)
+    caminho_gold = "data/03_gold/fato_financeiro_ENCRYPTED.csv"
+    Path("data/03_gold").mkdir(exist_ok=True)
     
     resultado = salvar_camada_gold(df_criptografado, caminho_gold)
     print(f"✅ {resultado}\n")

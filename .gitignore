@@ -1,26 +1,4 @@
-# Security Keys (CRÍTICO: NÃO COMMITAR!)
-security/master.key
-security/salt.key
-security/*.key
-
-# Outputs do pipeline
-outputs/quarantine/*.csv
-outputs/reports/*.md
-outputs/alerts/*.json
-
-# Metadata
-metadata/*.db
-metadata/*.sqlite
-
-# Audit logs
-audit_logs/*.json
-
-# Dados gerados
-data/silver/*.csv
-data/gold/*.csv
-gold_layer/*.csv
-
-# Python cache
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -38,35 +16,62 @@ parts/
 sdist/
 var/
 wheels/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
-# Virtual environments
+# Ambientes Virtuais
 venv/
-ENV/
 env/
+ENV/
+.env
 .venv
+pip-log.txt
+pip-delete-this-directory.txt
 
-# IDE
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
 # OS
-.DS_Store
 Thumbs.db
+Desktop.ini
+.DS_Store
 
-# Jupyter Notebooks
-.ipynb_checkpoints
-*.ipynb
+# =========================
+# PROJETO FINANCEIRO
+# =========================
 
-# Logs
+# Segurança (CRÍTICO: NUNCA COMMITAR CHAVES!)
+security/*.key
+security/master.key
+security/salt.key
+
+# Logs de Auditoria e Temporários
+audit_logs/*.json
+logs/
 *.log
 
-# Temporary files
-*.tmp
-*.bak
-.cache/
+# Outputs Gerados (Manter apenas o código que gera, não os dados)
+# Se quiser manter exemplos, use git add -f
+outputs/alerts/*.json
+outputs/quarantine/*.csv
+outputs/reports/*.md
+
+# Metadados de Controle (CDC)
+metadata/*.db
+metadata/*.sqlite
+
+# Dados (Geralmente não versionamos dados grandes, mas como é um projeto demo,
+# manteremos os CSVs de exemplo se forem pequenos. Se forem grandes (>100MB), ignorar)
+# data/01_bronze/*.csv
+# data/02_silver/*.csv
+# data/03_gold/*.csv

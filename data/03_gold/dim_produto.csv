@@ -1,0 +1,7 @@
+produto_sk,produto_nome,preco_fabricacao,categoria_preco
+1, Carretera ,3.0,Low
+2, Montana ,5.0,Low
+3, Paseo ,10.0,Low
+4, Velo ,120.0,Medium
+5, VTT ,250.0,High
+6, Amarilla ,260.0,High

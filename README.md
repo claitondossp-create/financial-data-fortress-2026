@@ -37,55 +37,34 @@ Pipeline completo de ETL/ELT para análise de dados financeiros corporativos, im
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📂 Estrutura do Projeto (Organização Cronológica)
 
-```
-Financial-Data-Fortress-2026/
-│
-├── data/                           # Camadas do Data Lake
-│   ├── bronze/                     # Dados brutos (Financials.csv)
-│   ├── silver/                     # Dados limpos
-│   └── gold/                       # Star Schema (analytics-ready)
-│
-├── scripts/                        # Scripts Python production-ready
-│   ├── validate_bronze_quality.py          # Validação com Great Expectations
-│   ├── transform_bronze_to_silver.py       # Motor de transformação semântica
-│   ├── build_star_schema.py                # Modelagem dimensional Gold
-│   ├── data_reliability_monitor.py         # SRE: Contratos + CDC + RCA
-│   └── security_vault.py                   # CSO: Criptografia + Auditoria
-│
-├── docs/                           # Documentação técnica (12 documentos)
-│   ├── README.md                           # Índice da documentação
-│   ├── projeto_financeiro.md               # Visão geral do projeto
-│   ├── FASE_1_ETL.md                       # ETL Bronze→Silver
-│   ├── FASE_2_INSIGHTS.md                  # Business Insights
-│   ├── FASE_3_DASHBOARD.md                 # Power BI Dashboard
-│   ├── RELATORIO_AUDITORIA_BRONZE.md       # Auditoria de qualidade
-│   ├── MATRIZ_TRANSFORMACAO_PRATA.md       # Regras de transformação
-│   ├── ARQUITETURA_CAMADA_OURO.md          # Star Schema design
-│   ├── BLUEPRINT_DATAOPS_2026.md           # DataOps & Observabilidade
-│   ├── MANIFESTO_GOVERNANCA_SEGURANCA.md   # Governança & Criptografia
-│   ├── DOC_VALIDACAO_BRONZE_GREAT_EXPECTATIONS.md  # Validação técnica
-│   └── DOC_PIPELINE_CONSOLIDADO.md         # Análise de código
-│
-├── outputs/                        # Outputs do pipeline
-│   ├── quarantine/                 # Registros que falharam validação
-│   ├── reports/                    # Relatórios de transformação
-│   └── alerts/                     # Alertas de anomalias (JSON)
-│
-├── security/                       # Artefatos de segurança
-│   ├── master.key                  # Chave mestra AES-256 (BACKUP!)
-│   └── salt.key                    # Salt para hashing
-│
-├── metadata/                       # Metadados do pipeline
-│   └── incremental_load.db         # Watermarks para CDC
-│
-├── audit_logs/                     # Logs de auditoria forense
-│   └── access_YYYYMMDD.json        # Logs indeléveis (retenção 10 anos)
-│
-├── .gitignore                      # Arquivos ignorados pelo Git
-├── requirements.txt                # Dependências Python
-└── README.md                       # Este arquivo
+```bash
+📦 Financial-Data-Fortress-2026
+├── 📂 data/
+│   ├── 01_bronze/                  # Dados brutos (Raw)
+│   ├── 02_silver/                  # Dados limpos
+│   └── 03_gold/                    # Star Schema (analytics-ready)
+├── 📂 docs/            # Documentação Técnica (Leia na ordem)
+│   ├── 00_README.md
+│   ├── 01_projeto_financeiro.md
+│   ├── 02_FASE_1_ETL.md
+│   ├── 03_RELATORIO_AUDITORIA_BRONZE.md
+│   ├── 04_DOC_VALIDACAO_BRONZE_GREAT_EXPECTATIONS.md
+│   ├── 05_FASE_2_INSIGHTS.md
+│   ├── 06_MATRIZ_TRANSFORMACAO_PRATA.md
+│   ├── 07_FASE_3_DASHBOARD.md
+│   ├── 08_ARQUITETURA_CAMADA_OURO.md
+│   ├── 09_BLUEPRINT_DATAOPS_2026.md
+│   ├── 10_MANIFESTO_GOVERNANCA_SEGURANCA.md
+│   └── 11_DOC_PIPELINE_CONSOLIDADO.md
+├── 📂 scripts/         # Scripts Python
+│   ├── transform_bronze_to_silver.py
+│   ├── build_star_schema.py
+│   ├── data_reliability_monitor.py
+│   └── security_vault.py
+├── 📂 outputs/         # Relatórios, Alertas e Logs
+└── 📂 metadata/        # Bancos de dados de controle (CDC)
 ```
 
 ---
@@ -126,10 +105,10 @@ python scripts/security_vault.py
 
 ```bash
 # Camada Silver
-cat data/silver/Financials_Silver.csv
+cat data/02_silver/Financials_Silver.csv
 
 # Camada Gold (6 tabelas)
-ls data/gold/
+ls data/03_gold/
 # → dim_produto.csv, dim_geografia.csv, dim_segmento.csv,
 #    dim_desconto.csv, dim_tempo.csv, fato_financeiro.csv
 
@@ -149,7 +128,7 @@ cat outputs/alerts/anomalies_*.json
 **Objetivo**: Preservar dados brutos com auditoria de origem
 
 ```python
-df_bronze = pd.read_csv('data/bronze/Financials.csv')
+df_bronze = pd.read_csv('data/01_bronze/Financials.csv')
 df_bronze['_ingestion_timestamp'] = datetime.utcnow()
 df_bronze['_source_file'] = 'Financials.csv'
 ```
@@ -305,14 +284,15 @@ df_decrypted = vault.descriptografar_dataset(df_encrypted, ['cogs_encrypted'])
 
 ## 📚 Documentação Completa
 
-Consulte a pasta [`docs/`](docs/) para documentação técnica detalhada:
+Consulte a pasta [`docs/`](docs/) para documentação técnica detalhada (leia na ordem):
 
-- **[README.md](docs/README.md)** - Índice da documentação
-- **[FASE_1_ETL.md](docs/FASE_1_ETL.md)** - Detalhamento do processo ETL (5 etapas)
-- **[RELATORIO_AUDITORIA_BRONZE.md](docs/RELATORIO_AUDITORIA_BRONZE.md)** - Auditoria forense da camada Bronze (9 anomalias críticas)
-- **[ARQUITETURA_CAMADA_OURO.md](docs/ARQUITETURA_CAMADA_OURO.md)** - Design do Star Schema com 5 dimensões
-- **[BLUEPRINT_DATAOPS_2026.md](docs/BLUEPRINT_DATAOPS_2026.md)** - Estratégia de DataOps e Observabilidade
-- **[MANIFESTO_GOVERNANCA_SEGURANCA.md](docs/MANIFESTO_GOVERNANCA_SEGURANCA.md)** - Governança e Segurança Institucional
+- **[00_README.md](docs/00_README.md)** - Índice da documentação
+- **[01_projeto_financeiro.md](docs/01_projeto_financeiro.md)** - Visão Geral do Projeto
+- **[02_FASE_1_ETL.md](docs/02_FASE_1_ETL.md)** - Detalhamento do processo ETL
+- **[03_RELATORIO_AUDITORIA_BRONZE.md](docs/03_RELATORIO_AUDITORIA_BRONZE.md)** - Auditoria qualidade de dados
+- **[06_MATRIZ_TRANSFORMACAO_PRATA.md](docs/06_MATRIZ_TRANSFORMACAO_PRATA.md)** - Regras de negócio semânticas
+- **[08_ARQUITETURA_CAMADA_OURO.md](docs/08_ARQUITETURA_CAMADA_OURO.md)** - Modelagem dimensional
+- **[10_MANIFESTO_GOVERNANCA_SEGURANCA.md](docs/10_MANIFESTO_GOVERNANCA_SEGURANCA.md)** - Políticas globais de segurança
 
 ---
 

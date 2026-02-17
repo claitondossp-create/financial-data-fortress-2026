@@ -29,9 +29,9 @@ from pathlib import Path
 # CONFIGURAÇÕES GLOBAIS
 # ========================================
 
-CAMINHO_BRONZE = "Financials.csv"
-CAMINHO_SILVER = "Financials_Silver.csv"
-CAMINHO_RELATORIO_COMPARATIVO = "reports/transformation_report.md"
+CAMINHO_BRONZE = "data/01_bronze/Financials.csv"
+CAMINHO_SILVER = "data/02_silver/Financials_Silver.csv"
+CAMINHO_RELATORIO_COMPARATIVO = "outputs/reports/transformation_report.md"
 
 # Colunas monetárias que requerem parsing complexo
 COLUNAS_MONETARIAS = [
@@ -593,7 +593,7 @@ class SilverTransformationEngine:
             linhas_markdown.append("\n---\n\n")
         
         # Salvar relatório
-        Path("reports").mkdir(exist_ok=True)
+        Path("outputs/reports").mkdir(parents=True, exist_ok=True)
         
         with open(CAMINHO_RELATORIO_COMPARATIVO, 'w', encoding='utf-8') as f:
             f.writelines(linhas_markdown)
