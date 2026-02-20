@@ -4,6 +4,7 @@ table dim_tempo
 
 	column tempo_sk
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 6c7d65a0-de92-4703-b64a-520bccd92c17
 		summarizeBy: none
@@ -120,11 +121,19 @@ table dim_tempo
 		mode: import
 		source =
 				let
-				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\dim_tempo.csv"),[Delimiter=",", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),
-				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"tempo_sk", Int64.Type}, {"data_completa", type date}, {"ano", Int64.Type}, {"mes", Int64.Type}, {"dia", Int64.Type}, {"dia_semana", type text}, {"trimestre", Int64.Type}, {"trimestre_fiscal", Int64.Type}, {"eh_fim_mes", type logical}, {"eh_fim_trimestre", type logical}, {"eh_fim_ano", type logical}, {"eh_feriado_bancario", type logical}})
+				    DataMin = #date(2013, 1, 1),
+				    DataMax = #date(2014, 12, 31),
+				    Duracao = Duration.Days(DataMax - DataMin) + 1,
+				    ListaDatas = List.Dates(DataMin, Duracao, #duration(1,0,0,0)),
+				    TabelaDatas = Table.FromList(ListaDatas, Splitter.SplitByNothing(), {"data_completa"}, null, ExtraValues.Error),
+				    FormatarTipo = Table.TransformColumnTypes(TabelaDatas,{{"data_completa", type date}}),
+				    AddAno = Table.AddColumn(FormatarTipo, "ano", each Date.Year([data_completa]), Int64.Type),
+				    AddMes = Table.AddColumn(AddAno, "mes", each Date.Month([data_completa]), Int64.Type),
+				    AddDia = Table.AddColumn(AddMes, "dia", each Date.Day([data_completa]), Int64.Type),
+				    AddTrimestre = Table.AddColumn(AddDia, "trimestre", each Date.QuarterOfYear([data_completa]), Int64.Type),
+				    AddTempoSk = Table.AddColumn(AddTrimestre, "tempo_sk", each Date.Year([data_completa])*10000 + Date.Month([data_completa])*100 + Date.Day([data_completa]), Int64.Type)
 				in
-				    #"Tipo Alterado"
+				    AddTempoSk
 
 	annotation PBI_ResultType = Table
 

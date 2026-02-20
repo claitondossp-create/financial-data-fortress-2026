@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "ace5afecf7f2247745db",
   "position": {
-    "x": 738.0746561886051,
-    "y": 243.92927308447938,
+    "x": 578.24690152496112,
+    "y": 157.91001770928062,
     "z": 7000,
-    "height": 211.237721021611,
-    "width": 409.901768172888,
-    "tabOrder": 6000
+    "height": 262.71568627450978,
+    "width": 500.846437699899,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "barChart",
@@ -23,11 +23,11 @@
                       "Entity": "dim_geografia"
                     }
                   },
-                  "Property": "pais"
+                  "Property": "PaÃ­s"
                 }
               },
-              "queryRef": "dim_geografia.pais",
-              "nativeQueryRef": "pais",
+              "queryRef": "dim_geografia.PaÃ­s",
+              "nativeQueryRef": "PaÃ­s",
               "active": true
             }
           ]
@@ -69,6 +69,21 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "visualTooltip": [
@@ -127,8 +142,29 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "preset": {
+              "expr": {
+                "Literal": {
+                  "Value": "'BottomLeft'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "3923e8d5bb5ec5b1964a"
 }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "408cdccde22f0d688f6c",
   "position": {
-    "x": 283.73119358074223,
-    "y": 0,
-    "z": 14000,
-    "height": 74.463390170511531,
-    "width": 300.42126379137409,
-    "tabOrder": 13000
+    "x": 0,
+    "y": 111.66666666666667,
+    "z": 2000,
+    "height": 75,
+    "width": 161.66666666666669,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "slicer",
@@ -225,6 +225,16 @@
                       "isToggled": true
                     }
                   ]
+                },
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'Qtr 1'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
                 }
               ]
             }
@@ -248,114 +258,113 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "l",
+                    "Entity": "LocalDateTable_97173e70-0320-4ec5-a7f1-cb66518ec2f1",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "l"
+                                }
+                              },
+                              "Property": "Ano"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "2014L"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "Annotations": {
+                      "filterExpressionMetadata": {
+                        "expressions": [
+                          {
+                            "HierarchyLevel": {
+                              "Expression": {
+                                "Hierarchy": {
+                                  "Expression": {
+                                    "PropertyVariationSource": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "dim_tempo"
+                                        }
+                                      },
+                                      "Name": "Variation",
+                                      "Property": "data_completa"
+                                    }
+                                  },
+                                  "Hierarchy": "Hierarquia de datas"
+                                }
+                              },
+                              "Level": "Ano"
+                            }
+                          }
+                        ],
+                        "decomposedIdentities": {
+                          "values": [
+                            [
+                              {
+                                "0": [
+                                  {
+                                    "Literal": {
+                                      "Value": "2014L"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          ],
+                          "columns": [
+                            {
+                              "value": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "LocalDateTable_97173e70-0320-4ec5-a7f1-cb66518ec2f1"
+                                    }
+                                  },
+                                  "Property": "Ano"
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        "valueMap": [
+                          {
+                            "0": "2014"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b1383ca6741249bcb29f",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "dim_tempo"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "data_completa"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
-              }
-            },
-            "Level": "Ano"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "913cb69e4b64d3d5c27b",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "dim_tempo"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "data_completa"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
-              }
-            },
-            "Level": "Trimestre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "aa6a322d913e469800b6",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "dim_tempo"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "data_completa"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
-              }
-            },
-            "Level": "Mês"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e10bb9c3d0f3f8860d06",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "dim_tempo"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "data_completa"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
-              }
-            },
-            "Level": "Dia"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

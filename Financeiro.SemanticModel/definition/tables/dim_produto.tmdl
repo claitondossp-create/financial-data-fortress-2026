@@ -1,8 +1,9 @@
 table dim_produto
 	lineageTag: f6c4c366-def7-4ff6-b7ca-4bfb196a2a59
 
-	column produto_sk
+	column 'CÃ³digo do Produto'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 039fdf50-351a-4ceb-b7d5-d0a8052c38a5
 		summarizeBy: none
@@ -10,7 +11,7 @@ table dim_produto
 
 		annotation SummarizationSetBy = Automatic
 
-	column produto_nome
+	column Produto
 		dataType: string
 		lineageTag: ab55a282-a358-44fb-b45f-9c54b9769b3b
 		summarizeBy: none

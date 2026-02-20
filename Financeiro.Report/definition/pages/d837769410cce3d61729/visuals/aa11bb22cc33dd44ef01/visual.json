@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "aa11bb22cc33dd44ef01",
   "position": {
-    "x": 262.76651982378854,
-    "y": 164.65198237885463,
+    "x": 0,
+    "y": 0.027664768104148862,
     "z": 3000,
-    "height": 67.665198237885463,
-    "width": 222.16740088105726,
-    "tabOrder": 2000
+    "height": 134.35313262815296,
+    "width": 267.66476810414969,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "card",
@@ -179,6 +179,85 @@
                   }
                 }
               }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading3'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "customizeSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "spaceBelowTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
             }
           }
         }
@@ -186,10 +265,11 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "3923e8d5bb5ec5b1964a",
   "filterConfig": {
     "filters": [
       {
-        "name": "a108b168b4373aeb0fa7",
+        "name": "ce288b250ae2e73cd649",
         "field": {
           "Measure": {
             "Expression": {

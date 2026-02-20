@@ -2,8 +2,5881 @@ cultureInfo pt-BR
 
 	linguisticMetadata =
 			{
-			  "Version": "1.0.0",
-			  "Language": "en-US"
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_desconto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_desconto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim desconto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_desconto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_desconto.desconto_sk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_desconto",
+			          "ConceptualProperty": "desconto_sk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "desconto sk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "desconto_sk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_desconto.faixa_desconto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_desconto",
+			          "ConceptualProperty": "faixa_desconto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "faixa desconto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "faixa_desconto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_desconto.percentual_min": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_desconto",
+			          "ConceptualProperty": "percentual_min"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "percentual min": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentual_min": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "percentual minimum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_desconto.percentual_max": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_desconto",
+			          "ConceptualProperty": "percentual_max"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "percentual max": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentual_max": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "percentual maximum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_geografia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_geografia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim geografia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_geografia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_geografia.geografia_sk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_geografia",
+			          "ConceptualProperty": "geografia_sk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "geografia sk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "geografia_sk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_geografia.PaÃs": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_geografia",
+			          "ConceptualProperty": "PaÃ­s"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "PaÃ­s": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_geografia.continente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_geografia",
+			          "ConceptualProperty": "continente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "continente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_geografia.regiao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_geografia",
+			          "ConceptualProperty": "regiao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "regiao": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim produto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_produto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_produto.CÃdigo_do_produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_produto",
+			          "ConceptualProperty": "CÃ³digo do Produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "CÃ³digo do produto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_produto.produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_produto",
+			          "ConceptualProperty": "Produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "produto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_produto.preco_fabricacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_produto",
+			          "ConceptualProperty": "preco_fabricacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "preco fabricacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "preco_fabricacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_produto.categoria_preco": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_produto",
+			          "ConceptualProperty": "categoria_preco"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoria preco": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "categoria_preco": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_segmento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_segmento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim segmento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_segmento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_segmento.segmento_sk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_segmento",
+			          "ConceptualProperty": "segmento_sk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "segmento sk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "segmento_sk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_segmento.segmento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_segmento",
+			          "ConceptualProperty": "Segmento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "segmento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_segmento.potencial_volume": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_segmento",
+			          "ConceptualProperty": "potencial_volume"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "potencial volume": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "potencial_volume": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "potencial capacity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "potencial size": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "potencial bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "potencial tome": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "potencial book": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "potencial work": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "potencial edition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim tempo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_tempo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "tempo": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dim rhythm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim cadence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rhythm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "cadence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "dim beat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dim speed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dim pulse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dim measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dim pace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dim stroke": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.tempo_sk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "tempo_sk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "tempo sk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tempo_sk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "sk": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.data_completa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "data_completa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data completa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_completa": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information completa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact completa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info completa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic completa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document completa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure completa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record completa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_tempo.data_completa.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "VariationSource": "data_completa",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.data_completa.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "VariationSource": "data_completa",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data completa ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information completa ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact completa ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info completa ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic completa ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document completa ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure completa ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record completa ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.data_completa.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "VariationSource": "data_completa",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data completa trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information completa trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact completa trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info completa trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic completa trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document completa trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure completa trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record completa trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.data_completa.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "VariationSource": "data_completa",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data completa mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information completa mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact completa mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info completa mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic completa mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document completa mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure completa mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record completa mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.data_completa.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "VariationSource": "data_completa",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data completa dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information completa dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact completa dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info completa dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic completa dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document completa dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure completa dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record completa dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.dia_semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "dia_semana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia semana": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dia_semana": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.trimestre_fiscal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "trimestre_fiscal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre fiscal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trimestre_fiscal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.eh_fim_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "eh_fim_mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eh fim me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "eh_fim_mes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.eh_fim_trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "eh_fim_trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eh fim trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "eh_fim_trimestre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.eh_fim_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "eh_fim_ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eh fim ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "eh_fim_ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tempo.eh_feriado_bancario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_tempo",
+			          "ConceptualProperty": "eh_feriado_bancario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eh feriado bancario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "eh_feriado_bancario": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fato financeiro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fato_financeiro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro.fato_financeiro_sk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro",
+			          "ConceptualProperty": "fato_financeiro_sk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "fato financeiro sk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fato_financeiro_sk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro.produto_sk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro",
+			          "ConceptualProperty": "produto_sk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "produto sk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "produto_sk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Ranking": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro.geografia_sk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro",
+			          "ConceptualProperty": "geografia_sk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "geografia sk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "geografia_sk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro.segmento_sk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro",
+			          "ConceptualProperty": "segmento_sk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "segmento sk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "segmento_sk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro.desconto_sk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro",
+			          "ConceptualProperty": "desconto_sk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "desconto sk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "desconto_sk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro.tempo_sk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro",
+			          "ConceptualProperty": "tempo_sk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "tempo sk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tempo_sk": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "sk": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro.unidades_vendida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro",
+			          "ConceptualProperty": "Unidades Vendidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unidades vendida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unidade vendida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro.receita_LÃquida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro",
+			          "ConceptualProperty": "Receita LÃ­quida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "receita LÃ­quida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro.custo_CPV": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro",
+			          "ConceptualProperty": "Custo (CPV)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "custo (CPV)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "custo": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "fato_financeiro.lucro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fato_financeiro",
+			          "ConceptualProperty": "Lucro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lucro": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medidas insight": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "medida insight": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "medida awareness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "medida intuition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "medida perception": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "medida acumen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "medida comprehension": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "medida discernment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "medida perceptiveness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "medida vision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "medida understanding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.placeholder": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Placeholder"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "placeholder": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.receita_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Receita Total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "receita total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "receita aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "receita overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.lucro_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Lucro Total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lucro total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "lucro aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "lucro overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.margem_bruta_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Margem Bruta %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margem bruta %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "margem bruta percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "margem bruta pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.un_vendidas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Un Vendidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "un vendidas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.custo_total_CPV": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Custo Total (CPV)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "custo total (CPV)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "custo total": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "custo aggregate (cpv)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "custo overall (cpv)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.ticket_medio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Ticket Medio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ticket medio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.crescimento_MoM_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Crescimento MoM %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "crescimento MoM %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "crescimento mom percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "crescimento mom pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.receita_acumulada_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Receita Acumulada Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "receita acumulada ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.media_movel_3_meses": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Media Movel 3 Meses"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "media movel 3 meses": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.lucro_acumulado_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Lucro Acumulado Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lucro acumulado ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.ranking_receita_por_pais": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Ranking Receita por Pais"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ranking receita por pais": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.ranking_lucro_por_pais": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Ranking Lucro por Pais"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ranking lucro por pais": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.contribuicao_do_pais_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Contribuicao do Pais %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "contribuicao do pais %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "contribuicao do pais percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "contribuicao do pais pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.participacao_segmento_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Participacao Segmento %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "participacao segmento %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "participacao segmento percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "participacao segmento pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.margem_lucro_segmento_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Margem Lucro Segmento %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margem lucro segmento %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "margem lucro segmento percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "margem lucro segmento pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.total_transacoes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Total Transacoes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total transacoes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate transacoe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall transacoe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.margem_por_faixa_desconto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Margem por Faixa Desconto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margem por faixa desconto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.alerta_desconto_alto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Alerta Desconto Alto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "alerta desconto alto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.ranking_lucro_produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Ranking Lucro Produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ranking lucro produto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.participacao_produto_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Participacao Produto %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "participacao produto %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "participacao produto percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "participacao produto pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.margem_vs_media": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Margem vs Media"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margem vs media": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "margem vs television": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "margem vs radio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "margem vs broadcasting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "margem vs vehicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "margem vs mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "margem vs method": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "margem vs avenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "margem vs agent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "margem vs organ": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "margem vs mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.categoria_BCG": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Categoria BCG"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoria BCG": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.indice_sazonalidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Indice Sazonalidade"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "indice sazonalidade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.melhor_trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Melhor Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "melhor trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.SVG_receita_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "SVG Receita Total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SVG receita total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "svg receita aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "svg receita overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.SVG_lucro_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "SVG Lucro Total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SVG lucro total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "svg lucro aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "svg lucro overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.SVG_margem_bruta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "SVG Margem Bruta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SVG margem bruta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.SVG_unidades_vendidas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "SVG Unidades Vendidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SVG unidades vendidas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.SVG_custo_CPV": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "SVG Custo CPV"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SVG custo CPV": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.SVG_ticket_medio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "SVG Ticket Medio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SVG ticket medio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.receita_YoY_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Receita YoY %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "receita YoY %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "receita yoy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "receita yoy pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.receita_YoY_texto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Receita YoY Texto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "receita YoY texto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.lucro_YoY_texto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Lucro YoY Texto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lucro YoY texto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.margem_bruta_YoY_texto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Margem Bruta YoY Texto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "margem bruta YoY texto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.unidades_vendidas_YoY_texto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Unidades Vendidas YoY Texto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unidades vendidas YoY texto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.tooltip_produto_campeao_receita": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Tooltip Produto Campeao Receita"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tooltip produto campeao receita": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medidas_insight.tooltip_insight_narrativo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas Insights",
+			          "ConceptualProperty": "Tooltip Insight Narrativo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tooltip insight narrativo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "dim_desconto_has_faixa_desconto": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_desconto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_desconto": {
+			          "Target": {
+			            "Entity": "dim_desconto"
+			          }
+			        },
+			        "dim_desconto.faixa_desconto": {
+			          "Target": {
+			            "Entity": "dim_desconto.faixa_desconto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_desconto"
+			            },
+			            "Object": {
+			              "Role": "dim_desconto.faixa_desconto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_descontos_have_faixa_descontos"
+			        }
+			      ]
+			    },
+			    "dim_desconto_has_percentual_min": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_desconto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_desconto": {
+			          "Target": {
+			            "Entity": "dim_desconto"
+			          }
+			        },
+			        "dim_desconto.percentual_min": {
+			          "Target": {
+			            "Entity": "dim_desconto.percentual_min"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_desconto"
+			            },
+			            "Object": {
+			              "Role": "dim_desconto.percentual_min"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_descontos_have_percentual_mins"
+			        }
+			      ]
+			    },
+			    "dim_desconto_has_percentual_max": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_desconto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_desconto": {
+			          "Target": {
+			            "Entity": "dim_desconto"
+			          }
+			        },
+			        "dim_desconto.percentual_max": {
+			          "Target": {
+			            "Entity": "dim_desconto.percentual_max"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_desconto"
+			            },
+			            "Object": {
+			              "Role": "dim_desconto.percentual_max"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_descontos_have_percentual_maxes"
+			        }
+			      ]
+			    },
+			    "dim_geografia_has_PaÃs": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_geografia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_geografia": {
+			          "Target": {
+			            "Entity": "dim_geografia"
+			          }
+			        },
+			        "dim_geografia.PaÃs": {
+			          "Target": {
+			            "Entity": "dim_geografia.PaÃs"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_geografia"
+			            },
+			            "Object": {
+			              "Role": "dim_geografia.PaÃs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_geografias_have_PaÃs"
+			        }
+			      ]
+			    },
+			    "dim_geografia_has_continente": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_geografia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_geografia": {
+			          "Target": {
+			            "Entity": "dim_geografia"
+			          }
+			        },
+			        "dim_geografia.continente": {
+			          "Target": {
+			            "Entity": "dim_geografia.continente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_geografia"
+			            },
+			            "Object": {
+			              "Role": "dim_geografia.continente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_geografias_have_continentes"
+			        }
+			      ]
+			    },
+			    "dim_geografia_has_regiao": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_geografia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_geografia": {
+			          "Target": {
+			            "Entity": "dim_geografia"
+			          }
+			        },
+			        "dim_geografia.regiao": {
+			          "Target": {
+			            "Entity": "dim_geografia.regiao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_geografia"
+			            },
+			            "Object": {
+			              "Role": "dim_geografia.regiao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_geografias_have_regiaos"
+			        }
+			      ]
+			    },
+			    "dim_produto_has_produto": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_produto": {
+			          "Target": {
+			            "Entity": "dim_produto"
+			          }
+			        },
+			        "dim_produto.produto": {
+			          "Target": {
+			            "Entity": "dim_produto.produto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_produto"
+			            },
+			            "Object": {
+			              "Role": "dim_produto.produto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_produtos_have_produtos"
+			        }
+			      ]
+			    },
+			    "dim_produto_has_preco_fabricacao": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_produto": {
+			          "Target": {
+			            "Entity": "dim_produto"
+			          }
+			        },
+			        "dim_produto.preco_fabricacao": {
+			          "Target": {
+			            "Entity": "dim_produto.preco_fabricacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_produto"
+			            },
+			            "Object": {
+			              "Role": "dim_produto.preco_fabricacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_produtos_have_preco_fabricacaos"
+			        }
+			      ]
+			    },
+			    "dim_produto_has_categoria_preco": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_produto": {
+			          "Target": {
+			            "Entity": "dim_produto"
+			          }
+			        },
+			        "dim_produto.categoria_preco": {
+			          "Target": {
+			            "Entity": "dim_produto.categoria_preco"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_produto"
+			            },
+			            "Object": {
+			              "Role": "dim_produto.categoria_preco"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_produtos_have_categoria_precos"
+			        }
+			      ]
+			    },
+			    "dim_segmento_has_segmento": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_segmento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_segmento": {
+			          "Target": {
+			            "Entity": "dim_segmento"
+			          }
+			        },
+			        "dim_segmento.segmento": {
+			          "Target": {
+			            "Entity": "dim_segmento.segmento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_segmento"
+			            },
+			            "Object": {
+			              "Role": "dim_segmento.segmento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_segmentos_have_segmentos"
+			        }
+			      ]
+			    },
+			    "dim_segmento_has_potencial_volume": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_segmento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_segmento": {
+			          "Target": {
+			            "Entity": "dim_segmento"
+			          }
+			        },
+			        "dim_segmento.potencial_volume": {
+			          "Target": {
+			            "Entity": "dim_segmento.potencial_volume"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_segmento"
+			            },
+			            "Object": {
+			              "Role": "dim_segmento.potencial_volume"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_segmentos_have_potencial_volumes"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_data_completa": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.data_completa": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_data_completas"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.ano": {
+			          "Target": {
+			            "Entity": "dim_tempo.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_anos"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.me": {
+			          "Target": {
+			            "Entity": "dim_tempo.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_me"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.dia": {
+			          "Target": {
+			            "Entity": "dim_tempo.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_dias"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_dia_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.dia_semana": {
+			          "Target": {
+			            "Entity": "dim_tempo.dia_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.dia_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_dia_semanas"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.trimestre": {
+			          "Target": {
+			            "Entity": "dim_tempo.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_trimestre_fiscal": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.trimestre_fiscal": {
+			          "Target": {
+			            "Entity": "dim_tempo.trimestre_fiscal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.trimestre_fiscal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_trimestre_fiscals"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_eh_fim_me": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.eh_fim_me": {
+			          "Target": {
+			            "Entity": "dim_tempo.eh_fim_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.eh_fim_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_eh_fim_me"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_eh_fim_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.eh_fim_trimestre": {
+			          "Target": {
+			            "Entity": "dim_tempo.eh_fim_trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.eh_fim_trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_eh_fim_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_eh_fim_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.eh_fim_ano": {
+			          "Target": {
+			            "Entity": "dim_tempo.eh_fim_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.eh_fim_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_eh_fim_anos"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_eh_feriado_bancario": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "dim_tempo.eh_feriado_bancario": {
+			          "Target": {
+			            "Entity": "dim_tempo.eh_feriado_bancario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.eh_feriado_bancario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_eh_feriado_bancarios"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_unidades_vendida": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "fato_financeiro.unidades_vendida": {
+			          "Target": {
+			            "Entity": "fato_financeiro.unidades_vendida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "fato_financeiro.unidades_vendida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_unidades_vendidas"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_receita_LÃquida": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "fato_financeiro.receita_LÃquida": {
+			          "Target": {
+			            "Entity": "fato_financeiro.receita_LÃquida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "fato_financeiro.receita_LÃquida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_receita_LÃquidas"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_custo_CPV": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "fato_financeiro.custo_CPV": {
+			          "Target": {
+			            "Entity": "fato_financeiro.custo_CPV"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "fato_financeiro.custo_CPV"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_custo_CPV"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_lucro": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "fato_financeiro.lucro": {
+			          "Target": {
+			            "Entity": "fato_financeiro.lucro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "fato_financeiro.lucro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_lucros"
+			        }
+			      ]
+			    },
+			    "medidas_insight_has_placeholder": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas Insights"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_insight": {
+			          "Target": {
+			            "Entity": "medidas_insight"
+			          }
+			        },
+			        "medidas_insight.placeholder": {
+			          "Target": {
+			            "Entity": "medidas_insight.placeholder"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_insight"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.placeholder"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_insights_have_placeholders"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_receita_total": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.receita_total": {
+			          "Target": {
+			            "Entity": "medidas_insight.receita_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.receita_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_receita_total"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_lucro_total": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.lucro_total": {
+			          "Target": {
+			            "Entity": "medidas_insight.lucro_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.lucro_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_lucro_total"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_margem_bruta_": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.margem_bruta_": {
+			          "Target": {
+			            "Entity": "medidas_insight.margem_bruta_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.margem_bruta_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_margem_bruta_"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_un_vendidas": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.un_vendidas": {
+			          "Target": {
+			            "Entity": "medidas_insight.un_vendidas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.un_vendidas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_un_vendidas"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_custo_total_CPV": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.custo_total_CPV": {
+			          "Target": {
+			            "Entity": "medidas_insight.custo_total_CPV"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.custo_total_CPV"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_custo_total_CPV"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_ticket_medio": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.ticket_medio": {
+			          "Target": {
+			            "Entity": "medidas_insight.ticket_medio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.ticket_medio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_ticket_medio"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_crescimento_MoM_": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.crescimento_MoM_": {
+			          "Target": {
+			            "Entity": "medidas_insight.crescimento_MoM_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.crescimento_MoM_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_crescimento_MoM_"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_medidas_insight_receita_acumulada_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "medidas_insight.receita_acumulada_ano": {
+			          "Target": {
+			            "Entity": "medidas_insight.receita_acumulada_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.receita_acumulada_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_receita_acumulada_ano"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_receita_acumulada_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.receita_acumulada_ano": {
+			          "Target": {
+			            "Entity": "medidas_insight.receita_acumulada_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.receita_acumulada_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_receita_acumulada_ano"
+			        }
+			      ]
+			    },
+			    "medidas_insight_has_media_movel_3_meses": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas Insights"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_insight": {
+			          "Target": {
+			            "Entity": "medidas_insight"
+			          }
+			        },
+			        "medidas_insight.media_movel_3_meses": {
+			          "Target": {
+			            "Entity": "medidas_insight.media_movel_3_meses"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_insight"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.media_movel_3_meses"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_insights_have_media_movel_3_meses"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_medidas_insight_lucro_acumulado_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "medidas_insight.lucro_acumulado_ano": {
+			          "Target": {
+			            "Entity": "medidas_insight.lucro_acumulado_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.lucro_acumulado_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_lucro_acumulado_ano"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_lucro_acumulado_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.lucro_acumulado_ano": {
+			          "Target": {
+			            "Entity": "medidas_insight.lucro_acumulado_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.lucro_acumulado_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_lucro_acumulado_ano"
+			        }
+			      ]
+			    },
+			    "medidas_insight_has_ranking_receita_por_pais": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas Insights"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_insight": {
+			          "Target": {
+			            "Entity": "medidas_insight"
+			          }
+			        },
+			        "medidas_insight.ranking_receita_por_pais": {
+			          "Target": {
+			            "Entity": "medidas_insight.ranking_receita_por_pais"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_insight"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.ranking_receita_por_pais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_insights_have_ranking_receita_por_pais"
+			        }
+			      ]
+			    },
+			    "medidas_insight_has_ranking_lucro_por_pais": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas Insights"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_insight": {
+			          "Target": {
+			            "Entity": "medidas_insight"
+			          }
+			        },
+			        "medidas_insight.ranking_lucro_por_pais": {
+			          "Target": {
+			            "Entity": "medidas_insight.ranking_lucro_por_pais"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_insight"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.ranking_lucro_por_pais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_insights_have_ranking_lucro_por_pais"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_contribuicao_do_pais_": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.contribuicao_do_pais_": {
+			          "Target": {
+			            "Entity": "medidas_insight.contribuicao_do_pais_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.contribuicao_do_pais_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_contribuicao_do_pais_"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_participacao_segmento_": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.participacao_segmento_": {
+			          "Target": {
+			            "Entity": "medidas_insight.participacao_segmento_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.participacao_segmento_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_participacao_segmento_"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_margem_lucro_segmento_": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.margem_lucro_segmento_": {
+			          "Target": {
+			            "Entity": "medidas_insight.margem_lucro_segmento_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.margem_lucro_segmento_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_margem_lucro_segmento_"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_total_transacoes": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.total_transacoes": {
+			          "Target": {
+			            "Entity": "medidas_insight.total_transacoes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.total_transacoes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_total_transacoes"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_margem_por_faixa_desconto": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.margem_por_faixa_desconto": {
+			          "Target": {
+			            "Entity": "medidas_insight.margem_por_faixa_desconto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.margem_por_faixa_desconto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_margem_por_faixa_desconto"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_alerta_desconto_alto": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.alerta_desconto_alto": {
+			          "Target": {
+			            "Entity": "medidas_insight.alerta_desconto_alto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.alerta_desconto_alto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_alerta_desconto_alto"
+			        }
+			      ]
+			    },
+			    "medidas_insight_has_ranking_lucro_produto": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas Insights"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_insight": {
+			          "Target": {
+			            "Entity": "medidas_insight"
+			          }
+			        },
+			        "medidas_insight.ranking_lucro_produto": {
+			          "Target": {
+			            "Entity": "medidas_insight.ranking_lucro_produto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_insight"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.ranking_lucro_produto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_insights_have_ranking_lucro_produto"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_participacao_produto_": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.participacao_produto_": {
+			          "Target": {
+			            "Entity": "medidas_insight.participacao_produto_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.participacao_produto_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_participacao_produto_"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_margem_vs_media": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.margem_vs_media": {
+			          "Target": {
+			            "Entity": "medidas_insight.margem_vs_media"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.margem_vs_media"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_margem_vs_media"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_categoria_BCG": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.categoria_BCG": {
+			          "Target": {
+			            "Entity": "medidas_insight.categoria_BCG"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.categoria_BCG"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_categoria_BCG"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_medidas_insight_indice_sazonalidade": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "medidas_insight.indice_sazonalidade": {
+			          "Target": {
+			            "Entity": "medidas_insight.indice_sazonalidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.indice_sazonalidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_indice_sazonalidade"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_indice_sazonalidade": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.indice_sazonalidade": {
+			          "Target": {
+			            "Entity": "medidas_insight.indice_sazonalidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.indice_sazonalidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_indice_sazonalidade"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_melhor_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.melhor_trimestre": {
+			          "Target": {
+			            "Entity": "medidas_insight.melhor_trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.melhor_trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_melhor_trimestre"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_SVG_receita_total": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.SVG_receita_total": {
+			          "Target": {
+			            "Entity": "medidas_insight.SVG_receita_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.SVG_receita_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_SVG_receita_total"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_SVG_lucro_total": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.SVG_lucro_total": {
+			          "Target": {
+			            "Entity": "medidas_insight.SVG_lucro_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.SVG_lucro_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_SVG_lucro_total"
+			        }
+			      ]
+			    },
+			    "medidas_insight_has_SVG_margem_bruta": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas Insights"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medidas_insight": {
+			          "Target": {
+			            "Entity": "medidas_insight"
+			          }
+			        },
+			        "medidas_insight.SVG_margem_bruta": {
+			          "Target": {
+			            "Entity": "medidas_insight.SVG_margem_bruta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medidas_insight"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.SVG_margem_bruta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_insights_have_SVG_margem_bruta"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_SVG_unidades_vendidas": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.SVG_unidades_vendidas": {
+			          "Target": {
+			            "Entity": "medidas_insight.SVG_unidades_vendidas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.SVG_unidades_vendidas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_SVG_unidades_vendidas"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_SVG_custo_CPV": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.SVG_custo_CPV": {
+			          "Target": {
+			            "Entity": "medidas_insight.SVG_custo_CPV"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.SVG_custo_CPV"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_SVG_custo_CPV"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_SVG_ticket_medio": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.SVG_ticket_medio": {
+			          "Target": {
+			            "Entity": "medidas_insight.SVG_ticket_medio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.SVG_ticket_medio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_SVG_ticket_medio"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_medidas_insight_receita_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "medidas_insight.receita_YoY_": {
+			          "Target": {
+			            "Entity": "medidas_insight.receita_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.receita_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_receita_YoY_"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_receita_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.receita_YoY_": {
+			          "Target": {
+			            "Entity": "medidas_insight.receita_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.receita_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_receita_YoY_"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_medidas_insight_receita_YoY_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "medidas_insight.receita_YoY_texto": {
+			          "Target": {
+			            "Entity": "medidas_insight.receita_YoY_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.receita_YoY_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_receita_YoY_texto"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_receita_YoY_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.receita_YoY_texto": {
+			          "Target": {
+			            "Entity": "medidas_insight.receita_YoY_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.receita_YoY_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_receita_YoY_texto"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_medidas_insight_lucro_YoY_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "medidas_insight.lucro_YoY_texto": {
+			          "Target": {
+			            "Entity": "medidas_insight.lucro_YoY_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.lucro_YoY_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_lucro_YoY_texto"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_lucro_YoY_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.lucro_YoY_texto": {
+			          "Target": {
+			            "Entity": "medidas_insight.lucro_YoY_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.lucro_YoY_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_lucro_YoY_texto"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_medidas_insight_margem_bruta_YoY_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "medidas_insight.margem_bruta_YoY_texto": {
+			          "Target": {
+			            "Entity": "medidas_insight.margem_bruta_YoY_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.margem_bruta_YoY_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_margem_bruta_YoY_texto"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_margem_bruta_YoY_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.margem_bruta_YoY_texto": {
+			          "Target": {
+			            "Entity": "medidas_insight.margem_bruta_YoY_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.margem_bruta_YoY_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_margem_bruta_YoY_texto"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_medidas_insight_unidades_vendidas_YoY_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "medidas_insight.unidades_vendidas_YoY_texto": {
+			          "Target": {
+			            "Entity": "medidas_insight.unidades_vendidas_YoY_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.unidades_vendidas_YoY_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_unidades_vendidas_YoY_texto"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_unidades_vendidas_YoY_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.unidades_vendidas_YoY_texto": {
+			          "Target": {
+			            "Entity": "medidas_insight.unidades_vendidas_YoY_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.unidades_vendidas_YoY_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_unidades_vendidas_YoY_texto"
+			        }
+			      ]
+			    },
+			    "dim_produto_has_medidas_insight_tooltip_produto_campeao_receita": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_produto": {
+			          "Target": {
+			            "Entity": "dim_produto"
+			          }
+			        },
+			        "medidas_insight.tooltip_produto_campeao_receita": {
+			          "Target": {
+			            "Entity": "medidas_insight.tooltip_produto_campeao_receita"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_produto"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.tooltip_produto_campeao_receita"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_produtos_have_tooltip_produto_campeao_receita"
+			        }
+			      ]
+			    },
+			    "dim_geografia_has_medidas_insight_tooltip_insight_narrativo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_geografia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_geografia": {
+			          "Target": {
+			            "Entity": "dim_geografia"
+			          }
+			        },
+			        "medidas_insight.tooltip_insight_narrativo": {
+			          "Target": {
+			            "Entity": "medidas_insight.tooltip_insight_narrativo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_geografia"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.tooltip_insight_narrativo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_geografias_have_tooltip_insight_narrativo"
+			        }
+			      ]
+			    },
+			    "dim_produto_has_medidas_insight_tooltip_insight_narrativo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_produto"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_produto": {
+			          "Target": {
+			            "Entity": "dim_produto"
+			          }
+			        },
+			        "medidas_insight.tooltip_insight_narrativo": {
+			          "Target": {
+			            "Entity": "medidas_insight.tooltip_insight_narrativo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_produto"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.tooltip_insight_narrativo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_produtos_have_tooltip_insight_narrativo"
+			        }
+			      ]
+			    },
+			    "dim_segmento_has_medidas_insight_tooltip_insight_narrativo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_segmento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_segmento": {
+			          "Target": {
+			            "Entity": "dim_segmento"
+			          }
+			        },
+			        "medidas_insight.tooltip_insight_narrativo": {
+			          "Target": {
+			            "Entity": "medidas_insight.tooltip_insight_narrativo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_segmento"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.tooltip_insight_narrativo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_segmentos_have_tooltip_insight_narrativo"
+			        }
+			      ]
+			    },
+			    "dim_tempo_has_medidas_insight_tooltip_insight_narrativo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          }
+			        },
+			        "medidas_insight.tooltip_insight_narrativo": {
+			          "Target": {
+			            "Entity": "medidas_insight.tooltip_insight_narrativo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.tooltip_insight_narrativo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_tooltip_insight_narrativo"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_medidas_insight_tooltip_insight_narrativo": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "medidas_insight.tooltip_insight_narrativo": {
+			          "Target": {
+			            "Entity": "medidas_insight.tooltip_insight_narrativo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "medidas_insight.tooltip_insight_narrativo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_tooltip_insight_narrativo"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_dim_geografia": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "dim_geografia": {
+			          "Target": {
+			            "Entity": "dim_geografia"
+			          },
+			          "Nouns": [
+			            {
+			              "geografia sk": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "dim_geografia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_dim_geografias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_geografia"
+			            },
+			            "Object": {
+			              "Role": "fato_financeiro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_geografias_have_fato_financeiros"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_dim_produto": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "dim_produto": {
+			          "Target": {
+			            "Entity": "dim_produto"
+			          },
+			          "Nouns": [
+			            {
+			              "produto sk": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "dim_produto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_dim_produtos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_produto"
+			            },
+			            "Object": {
+			              "Role": "fato_financeiro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_produtos_have_fato_financeiros"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_dim_segmento": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "dim_segmento": {
+			          "Target": {
+			            "Entity": "dim_segmento"
+			          },
+			          "Nouns": [
+			            {
+			              "segmento sk": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "dim_segmento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_dim_segmentos"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_segmento"
+			            },
+			            "Object": {
+			              "Role": "fato_financeiro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_segmentos_have_fato_financeiros"
+			        }
+			      ]
+			    },
+			    "fato_financeiro_has_dim_tempo": {
+			      "Binding": {
+			        "ConceptualEntity": "fato_financeiro"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fato_financeiro": {
+			          "Target": {
+			            "Entity": "fato_financeiro"
+			          }
+			        },
+			        "dim_tempo": {
+			          "Target": {
+			            "Entity": "dim_tempo"
+			          },
+			          "Nouns": [
+			            {
+			              "tempo sk": {
+			                "State": "Generated"
+			              }
+			            },
+			            {
+			              "sk": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fato_financeiro"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fato_financeiros_have_dim_tempi"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo"
+			            },
+			            "Object": {
+			              "Role": "fato_financeiro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tempi_have_fato_financeiros"
+			        }
+			      ]
+			    },
+			    "dim_tempo_data_completa_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo.data_completa": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa"
+			          }
+			        },
+			        "dim_tempo.data_completa.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_completas_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "dim_tempo_data_completa_hierarquia_de_data_has_dim_tempo_data_completa_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo.data_completa.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.hierarquia_de_data"
+			          }
+			        },
+			        "dim_tempo.data_completa.ano": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "dim_tempo_data_completa_hierarquia_de_data_has_dim_tempo_data_completa_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo.data_completa.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.hierarquia_de_data"
+			          }
+			        },
+			        "dim_tempo.data_completa.trimestre": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_tempo_data_completa_hierarquia_de_data_has_dim_tempo_data_completa_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo.data_completa.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.hierarquia_de_data"
+			          }
+			        },
+			        "dim_tempo.data_completa.mê": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê"
+			        }
+			      ]
+			    },
+			    "dim_tempo_data_completa_hierarquia_de_data_has_dim_tempo_data_completa_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo.data_completa.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.hierarquia_de_data"
+			          }
+			        },
+			        "dim_tempo.data_completa.dia": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
+			    "dim_tempo_data_completa_ano_has_dim_tempo_data_completa_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo.data_completa.ano": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.ano"
+			          }
+			        },
+			        "dim_tempo.data_completa.trimestre": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.ano"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos"
+			        }
+			      ]
+			    },
+			    "dim_tempo_data_completa_trimestre_has_dim_tempo_data_completa_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo.data_completa.trimestre": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.trimestre"
+			          }
+			        },
+			        "dim_tempo.data_completa.mê": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.mê"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_tempo_data_completa_mê_has_dim_tempo_data_completa_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_tempo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tempo.data_completa.mê": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.mê"
+			          }
+			        },
+			        "dim_tempo.data_completa.dia": {
+			          "Target": {
+			            "Entity": "dim_tempo.data_completa.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.mê"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.dia"
+			            },
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_tempo.data_completa.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_tempo.data_completa.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
 			}
 		contentType: json
 

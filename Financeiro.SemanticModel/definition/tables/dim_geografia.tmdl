@@ -3,6 +3,7 @@ table dim_geografia
 
 	column geografia_sk
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 5d042100-27db-4be9-ad11-90b8b40e7a18
 		summarizeBy: none
@@ -10,7 +11,7 @@ table dim_geografia
 
 		annotation SummarizationSetBy = Automatic
 
-	column pais
+	column PaÃ­s
 		dataType: string
 		lineageTag: d1e9b8a3-b4ef-435a-b921-bce3ba32d8ee
 		summarizeBy: none
@@ -36,13 +37,21 @@ table dim_geografia
 
 	partition dim_geografia = m
 		mode: import
-		source =
+		source = ```
 				let
 				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\dim_geografia.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"geografia_sk", Int64.Type}, {"pais", type text}, {"continente", type text}, {"regiao", type text}})
+				    Cabecalhos = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Renomear = Table.RenameColumns(Cabecalhos,{{"pais", "PaÃ­s"}}),
+				    Traduzir = Table.TransformColumns(Renomear, {{"PaÃ­s", each 
+				        if _ = "United States of America" then "Estados Unidos" else
+				        if _ = "France" then "FranÃ§a" else
+				        if _ = "Germany" then "Alemanha" else
+				        if _ = "Mexico" then "MÃ©xico" else
+				        if _ = "Canada" then "CanadÃ¡" else _, type text
+				    }})
 				in
-				    #"Tipo Alterado"
+				    Traduzir
+				```
 
 	annotation PBI_ResultType = Table
 

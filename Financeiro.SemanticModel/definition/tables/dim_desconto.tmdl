@@ -3,6 +3,7 @@ table dim_desconto
 
 	column desconto_sk
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: fe1d3f27-6eb1-4435-84d2-6581e2fdcde4
 		summarizeBy: sum

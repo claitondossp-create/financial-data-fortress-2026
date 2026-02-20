@@ -1,0 +1,86 @@
+{
+  "name": "Financial Fortress - ColorBlind Friendly",
+  "dataColors": [
+    "#3B719F",
+    "#0072B2",
+    "#D55E00",
+    "#F0E442",
+    "#009E73",
+    "#56B4E9",
+    "#E69F00",
+    "#CC79A7"
+  ],
+  "visualStyles": {
+    "*": {
+      "*": {
+        "*": [
+          {
+            "fontFamily": "Segoe UI",
+            "fontSize": 10,
+            "color": {"solid": {"color": "#666666"}}
+          }
+        ],
+        "title": [
+          {
+            "show": true,
+            "fontFamily": "Segoe UI Semibold",
+            "fontSize": 12,
+            "color": {"solid": {"color": "#333333"}}
+          }
+        ],
+        "gridline": [
+          {
+            "show": false,
+            "color": {"solid": {"color": "#EAEAEA"}}
+          }
+        ],
+        "yAxis": [
+          {
+            "show": true,
+            "fontSize": 9
+          }
+        ],
+        "xAxis": [
+          {
+            "show": false,
+            "fontSize": 9
+          }
+        ]
+      }
+    },
+    "columnChart": {
+      "*": {
+        "column": [
+          {
+            "color": {"solid": {"color": "#3B719F"}}
+          }
+        ]
+      }
+    },
+    "barChart": {
+      "*": {
+        "bar": [
+          {
+            "color": {"solid": {"color": "#3B719F"}}
+          }
+        ]
+      }
+    },
+    "lineChart": {
+      "*": {
+        "line": [
+          {
+            "color": {"solid": {"color": "#555555"}},
+            "thickness": 2
+          }
+        ],
+        "marker": [
+          {
+            "show": true,
+            "color": {"solid": {"color": "#0072B2"}}
+          }
+        ]
+      }
+    }
+  }
+}

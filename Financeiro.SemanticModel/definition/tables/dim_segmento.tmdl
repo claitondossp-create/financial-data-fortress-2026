@@ -3,6 +3,7 @@ table dim_segmento
 
 	column segmento_sk
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 5e78cfa9-b301-4d5c-b53e-ccedcc9a94f6
 		summarizeBy: none
@@ -10,7 +11,7 @@ table dim_segmento
 
 		annotation SummarizationSetBy = Automatic
 
-	column segmento_nome
+	column Segmento
 		dataType: string
 		lineageTag: c42c813d-722d-4bed-bac0-a4d3687154e1
 		summarizeBy: none
@@ -28,13 +29,21 @@ table dim_segmento
 
 	partition dim_segmento = m
 		mode: import
-		source =
+		source = ```
 				let
 				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\dim_segmento.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
-				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"segmento_sk", Int64.Type}, {"segmento_nome", type text}, {"potencial_volume", type text}})
+				    Cabecalhos = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Renomear = Table.RenameColumns(Cabecalhos,{{"segmento_nome", "Segmento"}}),
+				    Traduzir = Table.TransformColumns(Renomear, {{"Segmento", each 
+				        if _ = "Enterprise" then "Grande Empresa" else
+				        if _ = "Midmarket" then "MÃ©dio Porte" else
+				        if _ = "Small Business" then "Pequena Empresa" else
+				        if _ = "Government" then "Governo" else
+				        if _ = "Channel Partners" then "Parceiros" else _, type text
+				    }})
 				in
-				    #"Tipo Alterado"
+				    Traduzir
+				```
 
 	annotation PBI_ResultType = Table
 

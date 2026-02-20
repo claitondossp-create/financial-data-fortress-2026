@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "eefb589b68b725471600",
   "position": {
-    "x": 847.34202607823465,
-    "y": 0,
-    "z": 13000,
-    "height": 74.463390170511531,
-    "width": 300.42126379137409,
-    "tabOrder": 12000
+    "x": 0,
+    "y": 203.33333333333334,
+    "z": 1000,
+    "height": 75,
+    "width": 161.66666666666669,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "dim_geografia"
                     }
                   },
-                  "Property": "pais"
+                  "Property": "PaÃ­s"
                 }
               },
-              "queryRef": "dim_geografia.pais",
-              "nativeQueryRef": "pais",
+              "queryRef": "dim_geografia.PaÃ­s",
+              "nativeQueryRef": "PaÃ­s",
               "active": true
             }
           ]
@@ -50,56 +50,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "d",
-                    "Entity": "dim_geografia",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "d"
-                                }
-                              },
-                              "Property": "pais"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Canada'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'France'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },

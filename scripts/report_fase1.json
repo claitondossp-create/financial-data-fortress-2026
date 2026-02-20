@@ -1,0 +1,31 @@
+﻿{
+    "Tabelas_Analisadas":  [
+                               "dim_desconto",
+                               "dim_geografia",
+                               "dim_produto",
+                               "dim_segmento",
+                               "dim_tempo",
+                               "DateTableTemplate_1574937f-6e4e-4378-b7fc-31fdc8f19c08",
+                               "LocalDateTable_97173e70-0320-4ec5-a7f1-cb66518ec2f1",
+                               "fato_financeiro",
+                               "Medidas Insights"
+                           ],
+    "Encoding_Erros_Encontrados":  [
+
+                                   ],
+    "Chaves_Tecnicas_A_Ocultar":  [
+
+                                  ],
+    "Renomeacao_Produto_A_Fazer":  [
+                                       {
+                                           "AcaoRecomendada":  "Renomear para \u0027CÃ³digo do Produto\u0027",
+                                           "ColunaAtual":  "produto_sk",
+                                           "Tabela":  "dim_produto"
+                                       },
+                                       {
+                                           "AcaoRecomendada":  "Renomear para \u0027Produto\u0027",
+                                           "ColunaAtual":  "produto_nome",
+                                           "Tabela":  "dim_produto"
+                                       }
+                                   ]
+}

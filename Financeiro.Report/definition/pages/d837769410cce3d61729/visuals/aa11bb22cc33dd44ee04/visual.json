@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "aa11bb22cc33dd44ee04",
   "position": {
-    "x": 963.8981173864895,
-    "y": 124.73975636766335,
+    "x": 828.50435965770009,
+    "y": 0.6943314347708176,
     "z": 5000,
-    "height": 58.117386489479514,
-    "width": 164.42967884828352,
-    "tabOrder": 4000
+    "height": 72.133932642824547,
+    "width": 237.04197802918387,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas Insights"
                     }
                   },
-                  "Property": "Unidades Vendidas"
+                  "Property": "Un Vendidas"
                 }
               },
               "queryRef": "Medidas Insights.Unidades Vendidas",
-              "nativeQueryRef": "Unidades Vendidas"
+              "nativeQueryRef": "Un Vendidas"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas Insights"
                   }
                 },
-                "Property": "Unidades Vendidas"
+                "Property": "Un Vendidas"
               }
             },
             "direction": "Descending"
@@ -70,7 +70,7 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "1L"
                 }
               }
             },
@@ -352,26 +352,22 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
   },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "96714c93cfe0c0e50ea3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas Insights"
-              }
-            },
-            "Property": "Unidades Vendidas"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "3923e8d5bb5ec5b1964a"
 }

@@ -9,7 +9,7 @@ relationship AutoDetected_f9edcbbf-f99a-4c17-bdbe-11574e7b1408
 
 relationship AutoDetected_2726994b-e428-4ada-8dfa-c04b9cb706f7
 	fromColumn: fato_financeiro.produto_sk
-	toColumn: dim_produto.produto_sk
+	toColumn: dim_produto.'CÃ³digo do Produto'
 
 relationship AutoDetected_7b59a6a8-13cd-4dce-aaa1-d0e72775e11c
 	fromColumn: fato_financeiro.segmento_sk

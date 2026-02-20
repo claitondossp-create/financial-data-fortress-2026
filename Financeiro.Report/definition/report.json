@@ -11,7 +11,7 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "Frontier",
+      "name": "NewExecutive",
       "reportVersionAtImport": {
         "visual": "2.5.0",
         "report": "3.1.0",
@@ -59,8 +59,8 @@
           "type": "BaseTheme"
         },
         {
-          "name": "Frontier",
-          "path": "BuiltInThemes/Frontier.json",
+          "name": "NewExecutive",
+          "path": "BuiltInThemes/NewExecutive.json",
           "type": "CustomTheme"
         }
       ]

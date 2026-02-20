@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "40e3568bc290aa6712de",
   "position": {
-    "x": 932.29202037351445,
-    "y": 164.07470288624788,
+    "x": 820.699755899105,
+    "y": 0.028812777195533323,
     "z": 12000,
-    "height": 68.455008488964353,
-    "width": 228.18336162988115,
-    "tabOrder": 11000
+    "height": 134.35313262815296,
+    "width": 259.33279088689989,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "card",
@@ -182,26 +182,22 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
   },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5627d40160841f9af576",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas Insights"
-              }
-            },
-            "Property": "Unidades Vendidas YoY Texto"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "3923e8d5bb5ec5b1964a"
 }

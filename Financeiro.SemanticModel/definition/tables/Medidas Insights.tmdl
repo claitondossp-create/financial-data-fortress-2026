@@ -2,50 +2,60 @@ table 'Medidas Insights'
 	lineageTag: c7b9cca3-a378-4a3b-a67e-db4fcfa5a60f
 
 	/// Soma da receita liquida total
-	measure 'Receita Total' = SUM(fato_financeiro[venda_liquida])
+	measure 'Receita Total' = SUM(fato_financeiro[Receita LÃ­quida])
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: 1f983450-b2e4-49cf-b8d7-33095aeb321f
 
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
 	/// Soma do lucro total
-	measure 'Lucro Total' = SUM(fato_financeiro[lucro])
-		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+	measure 'Lucro Total' = SUM(fato_financeiro[Lucro])
+		formatString: """R$ ""#,##0,, ""Mi"";-""R$ ""#,##0,, ""Mi"""
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: d6af745a-ef63-4ef8-81c7-23bc4475eab5
 
 	/// Margem bruta percentual
-	measure 'Margem Bruta %' = DIVIDE([Lucro Total], [Receita Total], 0)
+	measure 'Margem Bruta %' = DIVIDE([Lucro Total], [Receita Total], BLANK())
 		formatString: 0.0%
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: 7c2f2198-458f-4e5a-99c8-363586759b35
 
 	/// Total de unidades vendidas
-	measure 'Unidades Vendidas' = SUM(fato_financeiro[unidades_vendidas])
+	measure 'Un Vendidas' = SUM(fato_financeiro[Unidades Vendidas])
 		formatString: #,##0
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: 9d3281b1-35a4-4b0a-90fc-70c599cec314
 
 	/// Custo total dos produtos vendidos
-	measure 'Custo Total (CPV)' = SUM(fato_financeiro[custo_bens_vendidos])
-		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+	measure 'Custo Total (CPV)' = SUM(fato_financeiro[Custo (CPV)])
+		formatString: """R$ ""#,##0,, ""Mi"";-""R$ ""#,##0,, ""Mi"""
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: 50728796-c99d-41d2-bfa3-f60b22397c56
 
 	/// Valor medio por unidade vendida
-	measure 'Ticket Medio' = DIVIDE([Receita Total], [Unidades Vendidas], 0)
+	measure 'Ticket Medio' = DIVIDE([Receita Total], [Un Vendidas], 0)
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: 1044f6ce-e364-416c-8197-3f7acd84cc9b
 
 	/// Crescimento mes a mes
-	measure 'Crescimento MoM %' = VAR Atual = [Receita Total] VAR Anterior = CALCULATE([Receita Total], DATEADD(dim_tempo[data_completa], -1, MONTH)) RETURN DIVIDE(Atual - Anterior, Anterior, BLANK())
+	measure 'Crescimento MoM %' =
+			VAR _Atual = [Receita Total]
+			VAR _Anterior = CALCULATE([Receita Total], PREVIOUSMONTH(dim_tempo[data_completa]))
+			RETURN
+			    IF(
+			        ISBLANK(_Anterior) || _Anterior = 0,
+			        BLANK(),
+			        DIVIDE(_Atual - _Anterior, _Anterior)
+			    )
 		formatString: 0.0%
 		displayFolder: 2. Inteligencia Temporal
 		lineageTag: 8c6ab352-c54a-4937-9ba8-9c5dda6577e9
 
 	/// Receita acumulada YTD
 	measure 'Receita Acumulada Ano' = TOTALYTD([Receita Total], dim_tempo[data_completa])
-		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		formatString: """R$ ""#,##0,, ""Mi"";-""R$ ""#,##0,, ""Mi"""
 		displayFolder: 2. Inteligencia Temporal
 		lineageTag: 920d356d-0ec2-48d3-a969-0cfb7096ba81
 
@@ -57,18 +67,18 @@ table 'Medidas Insights'
 
 	/// Lucro acumulado YTD
 	measure 'Lucro Acumulado Ano' = TOTALYTD([Lucro Total], dim_tempo[data_completa])
-		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		formatString: """R$ ""#,##0,, ""Mi"";-""R$ ""#,##0,, ""Mi"""
 		displayFolder: 2. Inteligencia Temporal
 		lineageTag: 62444d28-6b80-4ad6-bf27-f78349a1f1be
 
 	/// Ranking receita por pais
-	measure 'Ranking Receita por Pais' = RANKX(ALL(dim_geografia[pais]), [Receita Total], , DESC, DENSE)
+	measure 'Ranking Receita por Pais' = RANKX(ALL(dim_geografia[PaÃ­s]), [Receita Total], , DESC, DENSE)
 		formatString: 0
 		displayFolder: 3. Performance Geografica
 		lineageTag: 121b2e1f-c38c-402f-9f49-a79b07b5ade4
 
 	/// Ranking lucro por pais
-	measure 'Ranking Lucro por Pais' = RANKX(ALL(dim_geografia[pais]), [Lucro Total], , DESC, DENSE)
+	measure 'Ranking Lucro por Pais' = RANKX(ALL(dim_geografia[PaÃ­s]), [Lucro Total], , DESC, DENSE)
 		formatString: 0
 		displayFolder: 3. Performance Geografica
 		lineageTag: a268cce7-3897-4751-ad0b-0126d7ccf505
@@ -127,7 +137,7 @@ table 'Medidas Insights'
 		lineageTag: e3765753-5a80-4705-af15-5c1eaf883561
 
 	/// Classificacao BCG
-	measure 'Categoria BCG' = VAR CM = [Margem Bruta %] VAR CV = [Unidades Vendidas] VAR AM = CALCULATE([Margem Bruta %], ALL(dim_produto)) VAR AV = CALCULATE([Unidades Vendidas], ALL(dim_produto)) RETURN SWITCH(TRUE(), CM > AM && CV > AV, "Estrela", CM > AM && CV <= AV, "Vaca Leiteira", CM <= AM && CV > AV, "Interrogacao", "Abacaxi")
+	measure 'Categoria BCG' = VAR CM = [Margem Bruta %] VAR CV = [Un Vendidas] VAR AM = CALCULATE([Margem Bruta %], ALL(dim_produto)) VAR AV = CALCULATE([Un Vendidas], ALL(dim_produto)) RETURN SWITCH(TRUE(), CM > AM && CV > AV, "Estrela", CM > AM && CV <= AV, "Vaca Leiteira", CM <= AM && CV > AV, "Interrogacao", "Abacaxi")
 		displayFolder: 6. Analise de Produto
 		lineageTag: bb2b6cbb-52bb-4745-beda-3dd941206942
 
@@ -225,10 +235,10 @@ table 'Medidas Insights'
 
 	/// Card SVG dinamico para Unidades Vendidas com comparacao YoY
 	measure 'SVG Unidades Vendidas' =
-			VAR _v = [Unidades Vendidas]
+			VAR _v = [Un Vendidas]
 			VAR _m = _v / 1000000
 			VAR _fmt = "" & FORMAT(_m, "#,##0.0") & "M"
-			VAR _ant = CALCULATE([Unidades Vendidas], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _ant = CALCULATE([Un Vendidas], DATEADD(dim_tempo[data_completa], -1, YEAR))
 			VAR _pct = DIVIDE(_v - _ant, _ant, 0)
 			VAR _pctVal = ABS(_pct) * 100
 			VAR _pctFmt = FORMAT(_pctVal, "0.0") & "%25"
@@ -380,6 +390,7 @@ table 'Medidas Insights'
 			RETURN
 			    IF(ISBLANK(_anterior), "N/A (sem LY)", _seta & " " & _pctFmt & " vs LY")
 		displayFolder: 1. KPIs Estrategicos
+		lineageTag: 610a40b0-d13e-4da6-8f18-f44178c5159b
 
 	measure 'Margem Bruta YoY Texto' =
 			VAR _minDate = MIN(dim_tempo[data_completa])
@@ -405,17 +416,18 @@ table 'Medidas Insights'
 			RETURN
 			    IF(ISBLANK(_anterior), "N/A (sem LY)", _seta & " " & _diffFmt & " vs LY")
 		displayFolder: 1. KPIs Estrategicos
+		lineageTag: f0e1534f-f762-45f1-9cd7-cd31bac0c132
 
 	measure 'Unidades Vendidas YoY Texto' =
 			VAR _minDate = MIN(dim_tempo[data_completa])
 			VAR _maxDate = MAX(dim_tempo[data_completa])
-			VAR _atual = [Unidades Vendidas]
+			VAR _atual = [Un Vendidas]
 			VAR _anterior =
 			    IF(
 			        ISBLANK(_minDate) || ISBLANK(_maxDate),
 			        BLANK(),
 			        CALCULATE(
-			            [Unidades Vendidas],
+			            [Un Vendidas],
 			            REMOVEFILTERS(dim_tempo),
 			            FILTER(
 			                ALL(dim_tempo),
@@ -430,6 +442,38 @@ table 'Medidas Insights'
 			RETURN
 			    IF(ISBLANK(_anterior), "N/A (sem LY)", _seta & " " & _pctFmt & " vs LY")
 		displayFolder: 1. KPIs Estrategicos
+		lineageTag: 7a7c1c45-31bf-4888-b1a9-eee9895ab428
+
+	measure 'Tooltip Produto Campeao Receita' =
+			CALCULATE(
+			    MAX(dim_produto[produto]),
+			    TOPN(
+			        1,
+			        ALLSELECTED(dim_produto),
+			        [Receita Total],
+			        DESC
+			    )
+			)
+		displayFolder: 7. Storytelling (Textos)
+		lineageTag: a89dac39-6994-44b7-8420-2d02833c674d
+
+	measure 'Tooltip Insight Narrativo' = ```
+			VAR _Filtro = 
+			    IF(ISFILTERED(dim_geografia[PaÃ­s]), "Na regiÃ£o de " & SELECTEDVALUE(dim_geografia[PaÃ­s]) & ", ", 
+			        IF(ISFILTERED(dim_segmento[Segmento]), "No segmento " & SELECTEDVALUE(dim_segmento[Segmento]) & ", ", 
+			            "No cenÃ¡rio geral, "
+			        )
+			    )
+			VAR _ReceitaYoY = [Receita YoY %]
+			VAR _Evolucao = IF(_ReceitaYoY > 0, "cresceu ", IF(_ReceitaYoY < 0, "retraiu ", "manteve-se estÃ¡vel com "))
+			VAR _ProdTop = [Tooltip Produto Campeao Receita]
+			
+			RETURN
+			    _Filtro & "a Receita LÃ­quida " & _Evolucao & FORMAT(ABS(_ReceitaYoY), "0.0%") & " comparada ao perÃ­odo equivalente do ano passado. " &
+			    "Este resultado foi fortemente impactado pelas vendas do produto ðŸš€ " & _ProdTop & ", que liderou a geraÃ§Ã£o de receita."
+			```
+		displayFolder: 7. Storytelling (Textos)
+		lineageTag: a6d1200b-bb0e-4993-b3f7-61f016348bf6
 
 	column Placeholder
 		lineageTag: d9e09d57-efd7-4155-951c-c25cb6fbb8c0
