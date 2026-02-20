@@ -1,7 +1,7 @@
 table dim_produto
 	lineageTag: f6c4c366-def7-4ff6-b7ca-4bfb196a2a59
 
-	column 'CÃ³digo do Produto'
+	column 'Código do Produto'
 		dataType: int64
 		isHidden
 		formatString: 0
@@ -15,13 +15,13 @@ table dim_produto
 		dataType: string
 		lineageTag: ab55a282-a358-44fb-b45f-9c54b9769b3b
 		summarizeBy: none
-		sourceColumn: produto_nome
+		sourceColumn: nome_produto
 
 		annotation SummarizationSetBy = Automatic
 
 	column preco_fabricacao
-		dataType: int64
-		formatString: 0
+		dataType: double
+		formatString: R$ #,0.00
 		lineageTag: e24824c3-9105-4c62-afe8-933fd1e59488
 		summarizeBy: none
 		sourceColumn: preco_fabricacao
@@ -40,11 +40,11 @@ table dim_produto
 		mode: import
 		source =
 				let
-				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\dim_produto.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
-				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"produto_sk", Int64.Type}, {"produto_nome", type text}, {"preco_fabricacao", Int64.Type}, {"categoria_preco", type text}})
+				    Fonte = Csv.Document(File.Contents(#"Caminho Base" & "\data\03_gold\dim_produto.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Cabecalhos = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cabecalhos,{{"produto_sk", Int64.Type}, {"nome_produto", type text}, {"preco_fabricacao", type number}, {"categoria_preco", type text}})
 				in
-				    #"Tipo Alterado"
+				    Tipos
 
 	annotation PBI_ResultType = Table
 

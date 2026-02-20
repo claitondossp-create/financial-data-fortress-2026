@@ -2,13 +2,11 @@ table dim_geografia
 	lineageTag: b5815784-f2cc-4036-b37f-4a3dc7d8962a
 
 	column geografia_sk
-		dataType: int64
-		formatString: 0
+		dataType: string
+		isHidden
 		lineageTag: 5d042100-27db-4be9-ad11-90b8b40e7a18
 		summarizeBy: none
 		sourceColumn: geografia_sk
-
-		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -17,8 +15,6 @@ table dim_geografia
 		lineageTag: d1e9b8a3-b4ef-435a-b921-bce3ba32d8ee
 		summarizeBy: none
 		sourceColumn: pais
-
-		changedProperty = Name
 
 		annotation SummarizationSetBy = Automatic
 
@@ -40,21 +36,19 @@ table dim_geografia
 
 	partition dim_geografia = m
 		mode: import
-		source = ```
+		source =
 				let
-				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\dim_geografia.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Fonte = Csv.Document(File.Contents(#"Caminho Base" & "\data\03_gold\dim_geografia.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    Cabecalhos = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    Renomear = Table.RenameColumns(Cabecalhos,{{"pais", "PaÃ­s"}}),
-				    Traduzir = Table.TransformColumns(Renomear, {{"PaÃ­s", each 
+				    Traduzir = Table.TransformColumns(Cabecalhos, {{"pais", each
 				        if _ = "United States of America" then "Estados Unidos" else
-				        if _ = "France" then "FranÃ§a" else
+				        if _ = "France" then "França" else
 				        if _ = "Germany" then "Alemanha" else
-				        if _ = "Mexico" then "MÃ©xico" else
-				        if _ = "Canada" then "CanadÃ¡" else _, type text
+				        if _ = "Mexico" then "México" else
+				        if _ = "Canada" then "Canadá" else _, type text
 				    }})
 				in
 				    Traduzir
-				```
 
 	annotation PBI_ResultType = Table
 

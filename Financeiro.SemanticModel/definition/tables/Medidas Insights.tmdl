@@ -2,7 +2,7 @@ table 'Medidas Insights'
 	lineageTag: c7b9cca3-a378-4a3b-a67e-db4fcfa5a60f
 
 	/// Soma da receita liquida total
-	measure 'Receita Total' = SUM(fato_financeiro[Receita LÃ­quida])
+	measure 'Receita Total' = SUM(fato_financeiro[Receita Líquida])
 		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: 1f983450-b2e4-49cf-b8d7-33095aeb321f
@@ -119,7 +119,7 @@ table 'Medidas Insights'
 		lineageTag: 42938706-1e10-4013-8035-cd09e82f65bb
 
 	/// Ranking de lucro por produto
-	measure 'Ranking Lucro Produto' = RANKX(ALL(dim_produto[produto_nome]), [Lucro Total], , DESC, DENSE)
+	measure 'Ranking Lucro Produto' = RANKX(ALL(dim_produto[Produto]), [Lucro Total], , DESC, DENSE)
 		formatString: 0
 		displayFolder: 6. Analise de Produto
 		lineageTag: b79237ac-44a7-45c8-a9a9-12c87b99deca
@@ -209,7 +209,7 @@ table 'Medidas Insights'
 	/// Card SVG dinamico para Margem Bruta vs meta 15%
 	measure 'SVG Margem Bruta' =
 			VAR _v = [Margem Bruta %]
-			VAR _m = _v / 0,01
+			VAR _m = _v / 0.01
 			VAR _fmt = "" & FORMAT(_m, "#,##0.0") & "%25"
 			VAR _ant = CALCULATE([Margem Bruta %], --DATEADD(dim_tempo[data_completa], -1, YEAR))
 			VAR _pct = DIVIDE(_v - _ant, _ant, 0)
@@ -446,7 +446,7 @@ table 'Medidas Insights'
 
 	measure 'Tooltip Produto Campeao Receita' =
 			CALCULATE(
-			    MAX(dim_produto[produto]),
+			    MAX(dim_produto[Produto]),
 			    TOPN(
 			        1,
 			        ALLSELECTED(dim_produto),
@@ -454,25 +454,25 @@ table 'Medidas Insights'
 			        DESC
 			    )
 			)
-		displayFolder: 7. Storytelling (Textos)
+		displayFolder: 8. Storytelling (Textos)
 		lineageTag: a89dac39-6994-44b7-8420-2d02833c674d
 
 	measure 'Tooltip Insight Narrativo' = ```
 			VAR _Filtro = 
-			    IF(ISFILTERED(dim_geografia[pais]), "Na regiÃ£o de " & SELECTEDVALUE(dim_geografia[pais]) & ", ", 
-			        IF(ISFILTERED(dim_segmento[Segmento]), "No segmento " & SELECTEDVALUE(dim_segmento[Segmento]) & ", ", 
-			            "No cenÃ¡rio geral, "
+			    IF(ISFILTERED(dim_geografia[pais]), "Na região de " & SELECTEDVALUE(dim_geografia[pais]) & ", ",
+			        IF(ISFILTERED(dim_segmento[Segmento]), "No segmento " & SELECTEDVALUE(dim_segmento[Segmento]) & ", ",
+			            "No cenário geral, "
 			        )
 			    )
 			VAR _ReceitaYoY = [Receita YoY %]
-			VAR _Evolucao = IF(_ReceitaYoY > 0, "cresceu ", IF(_ReceitaYoY < 0, "retraiu ", "manteve-se estÃ¡vel com "))
+			VAR _Evolucao = IF(_ReceitaYoY > 0, "cresceu ", IF(_ReceitaYoY < 0, "retraiu ", "manteve-se estável com "))
 			VAR _ProdTop = [Tooltip Produto Campeao Receita]
 			
 			RETURN
-			    _Filtro & "a Receita LÃ­quida " & _Evolucao & FORMAT(ABS(_ReceitaYoY), "0.0%") & " comparada ao perÃ­odo equivalente do ano passado. " &
-			    "Este resultado foi fortemente impactado pelas vendas do produto ðŸš€ " & _ProdTop & ", que liderou a geraÃ§Ã£o de receita."
+			    _Filtro & "a Receita Líquida " & _Evolucao & FORMAT(ABS(_ReceitaYoY), "0.0%") & " comparada ao período equivalente do ano passado. " &
+			    "Este resultado foi fortemente impactado pelas vendas do produto 🚀 " & _ProdTop & ", que liderou a geração de receita."
 			```
-		displayFolder: 7. Storytelling (Textos)
+		displayFolder: 8. Storytelling (Textos)
 		lineageTag: a6d1200b-bb0e-4993-b3f7-61f016348bf6
 
 	column Placeholder

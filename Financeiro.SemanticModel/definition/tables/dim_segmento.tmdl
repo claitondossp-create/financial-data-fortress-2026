@@ -2,9 +2,8 @@ table dim_segmento
 	lineageTag: 690015cd-2d49-427f-b646-6d7cd28bb271
 
 	column segmento_sk
-		dataType: int64
+		dataType: string
 		isHidden
-		formatString: 0
 		lineageTag: 5e78cfa9-b301-4d5c-b53e-ccedcc9a94f6
 		summarizeBy: none
 		sourceColumn: segmento_sk
@@ -15,7 +14,7 @@ table dim_segmento
 		dataType: string
 		lineageTag: c42c813d-722d-4bed-bac0-a4d3687154e1
 		summarizeBy: none
-		sourceColumn: segmento_nome
+		sourceColumn: Segmento
 
 		annotation SummarizationSetBy = Automatic
 
@@ -29,21 +28,20 @@ table dim_segmento
 
 	partition dim_segmento = m
 		mode: import
-		source = ```
+		source =
 				let
-				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\dim_segmento.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Fonte = Csv.Document(File.Contents(#"Caminho Base" & "\data\03_gold\dim_segmento.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    Cabecalhos = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    Renomear = Table.RenameColumns(Cabecalhos,{{"segmento_nome", "Segmento"}}),
-				    Traduzir = Table.TransformColumns(Renomear, {{"Segmento", each 
+				    Renomear = Table.RenameColumns(Cabecalhos,{{"nome_segmento", "Segmento"}}),
+				    Traduzir = Table.TransformColumns(Renomear, {{"Segmento", each
 				        if _ = "Enterprise" then "Grande Empresa" else
-				        if _ = "Midmarket" then "MÃ©dio Porte" else
+				        if _ = "Midmarket" then "Médio Porte" else
 				        if _ = "Small Business" then "Pequena Empresa" else
 				        if _ = "Government" then "Governo" else
 				        if _ = "Channel Partners" then "Parceiros" else _, type text
 				    }})
 				in
 				    Traduzir
-				```
 
 	annotation PBI_ResultType = Table
 

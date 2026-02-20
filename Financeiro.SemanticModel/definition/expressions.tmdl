@@ -1,0 +1,5 @@
+expression 'Caminho Base' = "C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa" meta [IsParameterQuery = true, Type = "Text", IsParameterQueryRequired = true]
+	lineageTag: 9524caaa-a9df-4b77-adf2-3bcd173e3146
+
+	annotation PBI_ResultType = Text
+

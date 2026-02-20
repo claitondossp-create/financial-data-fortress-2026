@@ -10,6 +10,8 @@ table dim_tempo
 		summarizeBy: none
 		sourceColumn: tempo_sk
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column data_completa
@@ -32,7 +34,7 @@ table dim_tempo
 		dataType: int64
 		formatString: 0
 		lineageTag: d55c6d6a-6e6a-4504-b539-9e42813de76a
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: ano
 
 		annotation SummarizationSetBy = Automatic
@@ -41,7 +43,7 @@ table dim_tempo
 		dataType: int64
 		formatString: 0
 		lineageTag: 98f81fbc-f87b-48f2-aa9f-3908b0b97060
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: mes
 
 		annotation SummarizationSetBy = Automatic
@@ -50,7 +52,7 @@ table dim_tempo
 		dataType: int64
 		formatString: 0
 		lineageTag: cbdf4554-3c34-4a18-8bce-a513ba937fcd
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: dia
 
 		annotation SummarizationSetBy = Automatic
@@ -67,7 +69,7 @@ table dim_tempo
 		dataType: int64
 		formatString: 0
 		lineageTag: 7db209e8-1fcf-4ad4-97f0-b61e954a7387
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: trimestre
 
 		annotation SummarizationSetBy = Automatic
@@ -76,7 +78,7 @@ table dim_tempo
 		dataType: int64
 		formatString: 0
 		lineageTag: 92b7606a-a958-4dea-8ba3-d203fb1f9604
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: trimestre_fiscal
 
 		annotation SummarizationSetBy = Automatic
@@ -131,7 +133,13 @@ table dim_tempo
 				    AddMes = Table.AddColumn(AddAno, "mes", each Date.Month([data_completa]), Int64.Type),
 				    AddDia = Table.AddColumn(AddMes, "dia", each Date.Day([data_completa]), Int64.Type),
 				    AddTrimestre = Table.AddColumn(AddDia, "trimestre", each Date.QuarterOfYear([data_completa]), Int64.Type),
-				    AddTempoSk = Table.AddColumn(AddTrimestre, "tempo_sk", each Date.Year([data_completa])*10000 + Date.Month([data_completa])*100 + Date.Day([data_completa]), Int64.Type)
+				    AddTrimFiscal = Table.AddColumn(AddTrimestre, "trimestre_fiscal", each Date.QuarterOfYear([data_completa]), Int64.Type),
+				    AddDiaSemana = Table.AddColumn(AddTrimFiscal, "dia_semana", each Date.DayOfWeekName([data_completa], "pt-BR"), type text),
+				    AddFimMes = Table.AddColumn(AddDiaSemana, "eh_fim_mes", each [data_completa] = Date.EndOfMonth([data_completa]), type logical),
+				    AddFimTri = Table.AddColumn(AddFimMes, "eh_fim_trimestre", each List.Contains({3,6,9,12}, Date.Month([data_completa])) and [data_completa] = Date.EndOfMonth([data_completa]), type logical),
+				    AddFimAno = Table.AddColumn(AddFimTri, "eh_fim_ano", each Date.Month([data_completa]) = 12 and Date.Day([data_completa]) = 31, type logical),
+				    AddFeriado = Table.AddColumn(AddFimAno, "eh_feriado_bancario", each false, type logical),
+				    AddTempoSk = Table.AddColumn(AddFeriado, "tempo_sk", each Date.Year([data_completa])*10000 + Date.Month([data_completa])*100 + Date.Day([data_completa]), Int64.Type)
 				in
 				    AddTempoSk
 

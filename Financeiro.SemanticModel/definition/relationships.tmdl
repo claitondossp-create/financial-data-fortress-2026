@@ -9,7 +9,7 @@ relationship AutoDetected_f9edcbbf-f99a-4c17-bdbe-11574e7b1408
 
 relationship AutoDetected_2726994b-e428-4ada-8dfa-c04b9cb706f7
 	fromColumn: fato_financeiro.produto_sk
-	toColumn: dim_produto.'CÃ³digo do Produto'
+	toColumn: dim_produto.'Código do Produto'
 
 relationship AutoDetected_7b59a6a8-13cd-4dce-aaa1-d0e72775e11c
 	fromColumn: fato_financeiro.segmento_sk
@@ -18,4 +18,8 @@ relationship AutoDetected_7b59a6a8-13cd-4dce-aaa1-d0e72775e11c
 relationship AutoDetected_f306909e-7db9-47b3-a6b6-d70987c6798c
 	fromColumn: fato_financeiro.tempo_sk
 	toColumn: dim_tempo.tempo_sk
+
+relationship fato_financeiro_desconto
+	fromColumn: fato_financeiro.desconto_sk
+	toColumn: dim_desconto.desconto_sk
 

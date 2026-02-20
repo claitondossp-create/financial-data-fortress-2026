@@ -6,8 +6,10 @@ table fato_financeiro
 		isHidden
 		formatString: 0
 		lineageTag: 550fcb29-0e44-4a43-9874-828201bb5024
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: fato_financeiro_sk
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -19,6 +21,8 @@ table fato_financeiro
 		summarizeBy: none
 		sourceColumn: produto_sk
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column geografia_sk
@@ -28,6 +32,8 @@ table fato_financeiro
 		lineageTag: ad189bbc-1155-453b-9852-a84176b23584
 		summarizeBy: none
 		sourceColumn: geografia_sk
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -39,56 +45,64 @@ table fato_financeiro
 		summarizeBy: none
 		sourceColumn: segmento_sk
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column desconto_sk
-		dataType: string
+		dataType: int64
 		isHidden
+		formatString: 0
 		lineageTag: 2337a036-2e93-464c-b860-3647c7e10cc7
 		summarizeBy: none
 		sourceColumn: desconto_sk
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column tempo_sk
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: b929db35-6c82-4b6f-ba26-8d679c0efba7
 		summarizeBy: none
 		sourceColumn: tempo_sk
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column 'Unidades Vendidas'
-		dataType: int64
+		dataType: double
 		formatString: 0
 		lineageTag: 06023d4f-6f14-42a4-ba52-add158950d9f
 		summarizeBy: sum
 		sourceColumn: unidades_vendidas
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-	column 'Receita LÃ­quida'
-		dataType: int64
-		formatString: 0
+	column 'Receita Líquida'
+		dataType: decimal
+		formatString: R$ #,0.00
 		lineageTag: c0ff3538-2f0a-4e86-8791-66cbddc20cf0
 		summarizeBy: sum
-		sourceColumn: venda_liquida
+		sourceColumn: receita_liquida
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'Custo (CPV)'
-		dataType: int64
-		formatString: 0
+		dataType: decimal
+		formatString: R$ #,0.00
 		lineageTag: c838ec70-0330-4f44-a171-d1b8ea7b4505
 		summarizeBy: sum
-		sourceColumn: custo_bens_vendidos
+		sourceColumn: custo_produtos_vendidos
 
 		annotation SummarizationSetBy = Automatic
 
 	column Lucro
-		dataType: int64
+		dataType: decimal
 		formatString: 0
 		lineageTag: 54227eab-a06f-4091-92a9-746a6d4fe16f
 		summarizeBy: sum
@@ -100,10 +114,9 @@ table fato_financeiro
 		mode: import
 		source =
 				let
-				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\fato_financeiro.csv"),[Delimiter=",", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Fonte = Csv.Document(File.Contents(#"Caminho Base" & "\data\03_gold\fato_financeiro.csv"),[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    Cabecalhos = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    Renomear = Table.RenameColumns(Cabecalhos,{{"unidades_vendidas", "Unidades Vendidas"}, {"venda_liquida", "Receita LÃ­quida"}, {"custo_bens_vendidos", "Custo (CPV)"}, {"lucro", "Lucro"}}),
-				    Tipos = Table.TransformColumnTypes(Renomear,{{"fato_financeiro_sk", Int64.Type}, {"produto_sk", Int64.Type}, {"geografia_sk", Int64.Type}, {"segmento_sk", Int64.Type}, {"desconto_sk", type text}, {"tempo_sk", Int64.Type}, {"Unidades Vendidas", Int64.Type}, {"Receita LÃ­quida", Currency.Type}, {"Custo (CPV)", Currency.Type}, {"Lucro", Currency.Type}})
+				    Tipos = Table.TransformColumnTypes(Cabecalhos,{{"fato_financeiro_sk", Int64.Type}, {"produto_sk", Int64.Type}, {"geografia_sk", Int64.Type}, {"segmento_sk", Int64.Type}, {"desconto_sk", Int64.Type}, {"tempo_sk", Int64.Type}, {"unidades_vendidas", type number}, {"receita_liquida", Currency.Type}, {"custo_produtos_vendidos", Currency.Type}, {"lucro", Currency.Type}})
 				in
 				    Tipos
 

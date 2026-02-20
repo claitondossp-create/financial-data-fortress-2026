@@ -148,7 +148,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Matriz de Portfólio BCG — Estrelas vs Abacaxis'"
+                  "Value": "'Análise de Portfólio — Margem Bruta vs Volume por Produto'"
                 }
               }
             },

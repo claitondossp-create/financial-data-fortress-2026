@@ -6,7 +6,7 @@ table dim_desconto
 		isHidden
 		formatString: 0
 		lineageTag: fe1d3f27-6eb1-4435-84d2-6581e2fdcde4
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: desconto_sk
 
 		annotation SummarizationSetBy = Automatic
@@ -19,21 +19,21 @@ table dim_desconto
 
 		annotation SummarizationSetBy = Automatic
 
-	column percentual_min
-		dataType: int64
-		formatString: 0
+	column percentual_minimo
+		dataType: double
+		formatString: 0.00%
 		lineageTag: 36bed0ad-ccd6-46f7-978c-5ad9e0e18d77
-		summarizeBy: sum
-		sourceColumn: percentual_min
+		summarizeBy: none
+		sourceColumn: percentual_minimo
 
 		annotation SummarizationSetBy = Automatic
 
-	column percentual_max
-		dataType: int64
-		formatString: 0
+	column percentual_maximo
+		dataType: double
+		formatString: 0.00%
 		lineageTag: 763c9779-8b95-4a22-97dd-607972ad6457
-		summarizeBy: sum
-		sourceColumn: percentual_max
+		summarizeBy: none
+		sourceColumn: percentual_maximo
 
 		annotation SummarizationSetBy = Automatic
 
@@ -41,11 +41,11 @@ table dim_desconto
 		mode: import
 		source =
 				let
-				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\dim_desconto.csv"),[Delimiter=",", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
-				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"desconto_sk", Int64.Type}, {"faixa_desconto", type text}, {"percentual_min", Int64.Type}, {"percentual_max", Int64.Type}})
+				    Fonte = Csv.Document(File.Contents(#"Caminho Base" & "\data\03_gold\dim_desconto.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Cabecalhos = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    Tipos = Table.TransformColumnTypes(Cabecalhos,{{"desconto_sk", Int64.Type}, {"faixa_desconto", type text}, {"percentual_minimo", type number}, {"percentual_maximo", type number}})
 				in
-				    #"Tipo Alterado"
+				    Tipos
 
 	annotation PBI_ResultType = Table
 

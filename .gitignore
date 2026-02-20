@@ -75,3 +75,6 @@ metadata/*.sqlite
 # data/01_bronze/*.csv
 # data/02_silver/*.csv
 # data/03_gold/*.csv
+
+# Cache do Power BI Desktop (gerado automaticamente — não versionar)
+**/.pbi/cache.abf
