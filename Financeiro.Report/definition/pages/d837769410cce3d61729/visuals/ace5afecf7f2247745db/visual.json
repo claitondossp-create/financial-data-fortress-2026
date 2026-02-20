@@ -23,7 +23,7 @@
                       "Entity": "dim_geografia"
                     }
                   },
-                  "Property": "PaÃ­s"
+                  "Property": "pais"
                 }
               },
               "queryRef": "dim_geografia.PaÃ­s",

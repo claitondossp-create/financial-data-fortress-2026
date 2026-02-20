@@ -72,13 +72,13 @@ table 'Medidas Insights'
 		lineageTag: 62444d28-6b80-4ad6-bf27-f78349a1f1be
 
 	/// Ranking receita por pais
-	measure 'Ranking Receita por Pais' = RANKX(ALL(dim_geografia[PaÃ­s]), [Receita Total], , DESC, DENSE)
+	measure 'Ranking Receita por Pais' = RANKX(ALL(dim_geografia[pais]), [Receita Total], , DESC, DENSE)
 		formatString: 0
 		displayFolder: 3. Performance Geografica
 		lineageTag: 121b2e1f-c38c-402f-9f49-a79b07b5ade4
 
 	/// Ranking lucro por pais
-	measure 'Ranking Lucro por Pais' = RANKX(ALL(dim_geografia[PaÃ­s]), [Lucro Total], , DESC, DENSE)
+	measure 'Ranking Lucro por Pais' = RANKX(ALL(dim_geografia[pais]), [Lucro Total], , DESC, DENSE)
 		formatString: 0
 		displayFolder: 3. Performance Geografica
 		lineageTag: a268cce7-3897-4751-ad0b-0126d7ccf505
@@ -459,7 +459,7 @@ table 'Medidas Insights'
 
 	measure 'Tooltip Insight Narrativo' = ```
 			VAR _Filtro = 
-			    IF(ISFILTERED(dim_geografia[PaÃ­s]), "Na regiÃ£o de " & SELECTEDVALUE(dim_geografia[PaÃ­s]) & ", ", 
+			    IF(ISFILTERED(dim_geografia[pais]), "Na regiÃ£o de " & SELECTEDVALUE(dim_geografia[pais]) & ", ", 
 			        IF(ISFILTERED(dim_segmento[Segmento]), "No segmento " & SELECTEDVALUE(dim_segmento[Segmento]) & ", ", 
 			            "No cenÃ¡rio geral, "
 			        )

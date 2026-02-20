@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "eefb589b68b725471600",
+  "name": "712ff3ec0f2a31f9a78c",
   "position": {
-    "x": 0,
-    "y": 203.33333333333334,
-    "z": 1000,
-    "height": 75,
-    "width": 161.66666666666669,
-    "tabOrder": 0
+    "x": 262.61398176291794,
+    "y": 6.8085106382978724,
+    "z": 6001,
+    "height": 64.194528875379945,
+    "width": 299.57446808510639,
+    "tabOrder": 6001
   },
   "visual": {
     "visualType": "slicer",
@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "dim_geografia.PaÃ­s",
-              "nativeQueryRef": "PaÃ­s",
+              "nativeQueryRef": "pais",
               "active": true
             }
           ]
@@ -47,13 +47,26 @@
             }
           }
         }
-      ],
-      "general": [
-        {
-          "properties": {}
-        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "29f109505b277d98af61",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_geografia"
+              }
+            },
+            "Property": "pais"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

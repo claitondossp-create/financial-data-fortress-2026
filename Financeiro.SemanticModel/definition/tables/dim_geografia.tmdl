@@ -3,19 +3,22 @@ table dim_geografia
 
 	column geografia_sk
 		dataType: int64
-		isHidden
 		formatString: 0
 		lineageTag: 5d042100-27db-4be9-ad11-90b8b40e7a18
 		summarizeBy: none
 		sourceColumn: geografia_sk
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
-	column PaÃ­s
+	column pais
 		dataType: string
 		lineageTag: d1e9b8a3-b4ef-435a-b921-bce3ba32d8ee
 		summarizeBy: none
 		sourceColumn: pais
+
+		changedProperty = Name
 
 		annotation SummarizationSetBy = Automatic
 

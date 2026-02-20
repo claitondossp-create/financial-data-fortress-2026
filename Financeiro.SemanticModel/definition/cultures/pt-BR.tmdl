@@ -194,7 +194,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dim_geografia",
-			          "ConceptualProperty": "PaÃ­s"
+			          "ConceptualProperty": "pais"
 			        }
 			      },
 			      "State": "Generated",
