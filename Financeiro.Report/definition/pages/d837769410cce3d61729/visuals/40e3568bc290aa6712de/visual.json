@@ -185,5 +185,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5627d40160841f9af576",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas Insights"
+              }
+            },
+            "Property": "Unidades Vendidas YoY Texto"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

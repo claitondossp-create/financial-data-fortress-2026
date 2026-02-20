@@ -1,5 +1,6 @@
 table dim_tempo
 	lineageTag: 776c9d32-6ec9-4e0c-be3d-25e6e513d1fb
+	dataCategory: Time
 
 	column tempo_sk
 		dataType: int64

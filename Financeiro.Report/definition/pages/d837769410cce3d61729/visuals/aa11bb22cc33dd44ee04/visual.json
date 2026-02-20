@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "aa11bb22cc33dd44ee04",
   "position": {
-    "x": 984.31610942249245,
-    "y": 125.47112462006079,
+    "x": 963.8981173864895,
+    "y": 124.73975636766335,
     "z": 5000,
-    "height": 59.331306990881458,
-    "width": 149.78723404255319,
+    "height": 58.117386489479514,
+    "width": 164.42967884828352,
     "tabOrder": 4000
   },
   "visual": {
@@ -355,5 +355,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "96714c93cfe0c0e50ea3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas Insights"
+              }
+            },
+            "Property": "Unidades Vendidas"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -3,13 +3,13 @@ table 'Medidas Insights'
 
 	/// Soma da receita liquida total
 	measure 'Receita Total' = SUM(fato_financeiro[venda_liquida])
-		formatString: $#,##0.00
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: 1f983450-b2e4-49cf-b8d7-33095aeb321f
 
 	/// Soma do lucro total
 	measure 'Lucro Total' = SUM(fato_financeiro[lucro])
-		formatString: $#,##0.00
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: d6af745a-ef63-4ef8-81c7-23bc4475eab5
 
@@ -27,13 +27,13 @@ table 'Medidas Insights'
 
 	/// Custo total dos produtos vendidos
 	measure 'Custo Total (CPV)' = SUM(fato_financeiro[custo_bens_vendidos])
-		formatString: $#,##0.00
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: 50728796-c99d-41d2-bfa3-f60b22397c56
 
 	/// Valor medio por unidade vendida
 	measure 'Ticket Medio' = DIVIDE([Receita Total], [Unidades Vendidas], 0)
-		formatString: $#,##0.00
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: 1044f6ce-e364-416c-8197-3f7acd84cc9b
 
@@ -45,19 +45,19 @@ table 'Medidas Insights'
 
 	/// Receita acumulada YTD
 	measure 'Receita Acumulada Ano' = TOTALYTD([Receita Total], dim_tempo[data_completa])
-		formatString: $#,##0.00
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: 2. Inteligencia Temporal
 		lineageTag: 920d356d-0ec2-48d3-a969-0cfb7096ba81
 
 	/// Media movel 3 meses
 	measure 'Media Movel 3 Meses' = AVERAGEX(DATESINPERIOD(dim_tempo[data_completa], MAX(dim_tempo[data_completa]), -3, MONTH), [Receita Total])
-		formatString: $#,##0.00
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: 2. Inteligencia Temporal
 		lineageTag: ebb0afa7-31d6-46e6-bfab-43098496304a
 
 	/// Lucro acumulado YTD
 	measure 'Lucro Acumulado Ano' = TOTALYTD([Lucro Total], dim_tempo[data_completa])
-		formatString: $#,##0.00
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
 		displayFolder: 2. Inteligencia Temporal
 		lineageTag: 62444d28-6b80-4ad6-bf27-f78349a1f1be
 
@@ -306,8 +306,23 @@ table 'Medidas Insights'
 
 	/// Variacao percentual da receita total em comparacao ao ano anterior (YoY)
 	measure 'Receita YoY %' =
+			VAR _minDate = MIN(dim_tempo[data_completa])
+			VAR _maxDate = MAX(dim_tempo[data_completa])
 			VAR _atual = [Receita Total]
-			VAR _anterior = CALCULATE([Receita Total], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _anterior =
+			    IF(
+			        ISBLANK(_minDate) || ISBLANK(_maxDate),
+			        BLANK(),
+			        CALCULATE(
+			            [Receita Total],
+			            REMOVEFILTERS(dim_tempo),
+			            FILTER(
+			                ALL(dim_tempo),
+			                dim_tempo[data_completa] >= DATE(YEAR(_minDate) - 1, MONTH(_minDate), DAY(_minDate))
+			                && dim_tempo[data_completa] <= DATE(YEAR(_maxDate) - 1, MONTH(_maxDate), DAY(_maxDate))
+			            )
+			        )
+			    )
 			RETURN
 			    DIVIDE(_atual - _anterior, _anterior, BLANK())
 		formatString: 0.0%;-0.0%;0.0%
@@ -316,44 +331,104 @@ table 'Medidas Insights'
 
 	/// Texto formatado de variacao YoY para exibir no subtitulo do cartao
 	measure 'Receita YoY Texto' =
+			VAR _minDate = MIN(dim_tempo[data_completa])
+			VAR _maxDate = MAX(dim_tempo[data_completa])
 			VAR _atual = [Receita Total]
-			VAR _anterior = CALCULATE([Receita Total], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _anterior =
+			    IF(
+			        ISBLANK(_minDate) || ISBLANK(_maxDate),
+			        BLANK(),
+			        CALCULATE(
+			            [Receita Total],
+			            REMOVEFILTERS(dim_tempo),
+			            FILTER(
+			                ALL(dim_tempo),
+			                dim_tempo[data_completa] >= DATE(YEAR(_minDate) - 1, MONTH(_minDate), DAY(_minDate))
+			                && dim_tempo[data_completa] <= DATE(YEAR(_maxDate) - 1, MONTH(_maxDate), DAY(_maxDate))
+			            )
+			        )
+			    )
 			VAR _pct = DIVIDE(_atual - _anterior, _anterior, BLANK())
 			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
 			VAR _pctFmt = FORMAT(ABS(_pct) * 100, "0.0") & "%"
 			RETURN
-			    IF(ISBLANK(_anterior), "sem dados", _seta & " " & _pctFmt & " vs ano anterior")
+			    IF(ISBLANK(_anterior), "N/A (sem LY)", _seta & " " & _pctFmt & " vs LY")
 		displayFolder: 1. KPIs Estrategicos
 		lineageTag: 1a97854e-2da0-40b7-9512-1730e89a7682
 
 	measure 'Lucro YoY Texto' =
+			VAR _minDate = MIN(dim_tempo[data_completa])
+			VAR _maxDate = MAX(dim_tempo[data_completa])
 			VAR _atual = [Lucro Total]
-			VAR _anterior = CALCULATE([Lucro Total], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _anterior =
+			    IF(
+			        ISBLANK(_minDate) || ISBLANK(_maxDate),
+			        BLANK(),
+			        CALCULATE(
+			            [Lucro Total],
+			            REMOVEFILTERS(dim_tempo),
+			            FILTER(
+			                ALL(dim_tempo),
+			                dim_tempo[data_completa] >= DATE(YEAR(_minDate) - 1, MONTH(_minDate), DAY(_minDate))
+			                && dim_tempo[data_completa] <= DATE(YEAR(_maxDate) - 1, MONTH(_maxDate), DAY(_maxDate))
+			            )
+			        )
+			    )
 			VAR _pct = DIVIDE(_atual - _anterior, _anterior, BLANK())
 			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
 			VAR _pctFmt = FORMAT(ABS(_pct) * 100, "0.0") & "%"
 			RETURN
-			    IF(ISBLANK(_anterior), "sem dados", _seta & " " & _pctFmt & " vs ano anterior")
+			    IF(ISBLANK(_anterior), "N/A (sem LY)", _seta & " " & _pctFmt & " vs LY")
 		displayFolder: 1. KPIs Estrategicos
 
 	measure 'Margem Bruta YoY Texto' =
+			VAR _minDate = MIN(dim_tempo[data_completa])
+			VAR _maxDate = MAX(dim_tempo[data_completa])
 			VAR _atual = [Margem Bruta %]
-			VAR _anterior = CALCULATE([Margem Bruta %], DATEADD(dim_tempo[data_completa], -1, YEAR))
-			VAR _diffPP = (_atual - _anterior) * 100
+			VAR _anterior =
+			    IF(
+			        ISBLANK(_minDate) || ISBLANK(_maxDate),
+			        BLANK(),
+			        CALCULATE(
+			            [Margem Bruta %],
+			            REMOVEFILTERS(dim_tempo),
+			            FILTER(
+			                ALL(dim_tempo),
+			                dim_tempo[data_completa] >= DATE(YEAR(_minDate) - 1, MONTH(_minDate), DAY(_minDate))
+			                && dim_tempo[data_completa] <= DATE(YEAR(_maxDate) - 1, MONTH(_maxDate), DAY(_maxDate))
+			            )
+			        )
+			    )
+			VAR _diffPP = IF(ISBLANK(_anterior), BLANK(), (_atual - _anterior) * 100)
 			VAR _seta = IF(_diffPP >= 0, UNICHAR(9650), UNICHAR(9660))
 			VAR _diffFmt = FORMAT(ABS(_diffPP), "0.0") & "pp"
 			RETURN
-			    IF(ISBLANK(_anterior), "sem dados", _seta & " " & _diffFmt & " vs ano anterior")
+			    IF(ISBLANK(_anterior), "N/A (sem LY)", _seta & " " & _diffFmt & " vs LY")
 		displayFolder: 1. KPIs Estrategicos
 
 	measure 'Unidades Vendidas YoY Texto' =
+			VAR _minDate = MIN(dim_tempo[data_completa])
+			VAR _maxDate = MAX(dim_tempo[data_completa])
 			VAR _atual = [Unidades Vendidas]
-			VAR _anterior = CALCULATE([Unidades Vendidas], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _anterior =
+			    IF(
+			        ISBLANK(_minDate) || ISBLANK(_maxDate),
+			        BLANK(),
+			        CALCULATE(
+			            [Unidades Vendidas],
+			            REMOVEFILTERS(dim_tempo),
+			            FILTER(
+			                ALL(dim_tempo),
+			                dim_tempo[data_completa] >= DATE(YEAR(_minDate) - 1, MONTH(_minDate), DAY(_minDate))
+			                && dim_tempo[data_completa] <= DATE(YEAR(_maxDate) - 1, MONTH(_maxDate), DAY(_maxDate))
+			            )
+			        )
+			    )
 			VAR _pct = DIVIDE(_atual - _anterior, _anterior, BLANK())
 			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
 			VAR _pctFmt = FORMAT(ABS(_pct) * 100, "0.0") & "%"
 			RETURN
-			    IF(ISBLANK(_anterior), "sem dados", _seta & " " & _pctFmt & " vs ano anterior")
+			    IF(ISBLANK(_anterior), "N/A (sem LY)", _seta & " " & _pctFmt & " vs LY")
 		displayFolder: 1. KPIs Estrategicos
 
 	column Placeholder
