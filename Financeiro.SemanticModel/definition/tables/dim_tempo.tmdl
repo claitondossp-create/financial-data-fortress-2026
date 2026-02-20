@@ -1,0 +1,129 @@
+table dim_tempo
+	lineageTag: 776c9d32-6ec9-4e0c-be3d-25e6e513d1fb
+
+	column tempo_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c7d65a0-de92-4703-b64a-520bccd92c17
+		summarizeBy: none
+		sourceColumn: tempo_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_completa
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 17aaaf15-642e-4ece-879b-b06ff1a401c6
+		summarizeBy: none
+		sourceColumn: data_completa
+
+		variation Variation
+			isDefault
+			relationship: 058fa293-96cc-4c42-90ba-6da2ed46ce96
+			defaultHierarchy: LocalDateTable_97173e70-0320-4ec5-a7f1-cb66518ec2f1.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ano
+		dataType: int64
+		formatString: 0
+		lineageTag: d55c6d6a-6e6a-4504-b539-9e42813de76a
+		summarizeBy: sum
+		sourceColumn: ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 98f81fbc-f87b-48f2-aa9f-3908b0b97060
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia
+		dataType: int64
+		formatString: 0
+		lineageTag: cbdf4554-3c34-4a18-8bce-a513ba937fcd
+		summarizeBy: sum
+		sourceColumn: dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column dia_semana
+		dataType: string
+		lineageTag: 022b1355-9a76-48fc-945b-329001db8e10
+		summarizeBy: none
+		sourceColumn: dia_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: 7db209e8-1fcf-4ad4-97f0-b61e954a7387
+		summarizeBy: sum
+		sourceColumn: trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre_fiscal
+		dataType: int64
+		formatString: 0
+		lineageTag: 92b7606a-a958-4dea-8ba3-d203fb1f9604
+		summarizeBy: sum
+		sourceColumn: trimestre_fiscal
+
+		annotation SummarizationSetBy = Automatic
+
+	column eh_fim_mes
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9944c4c0-c8aa-43d7-80ae-cbbc404736d8
+		summarizeBy: none
+		sourceColumn: eh_fim_mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column eh_fim_trimestre
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c2d82797-b58a-4ba9-a573-e3bcd790c16c
+		summarizeBy: none
+		sourceColumn: eh_fim_trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column eh_fim_ano
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 05ca827c-c6ca-4c44-9a3b-72e4481ff4d2
+		summarizeBy: none
+		sourceColumn: eh_fim_ano
+
+		annotation SummarizationSetBy = Automatic
+
+	column eh_feriado_bancario
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 32474d69-e70e-44ef-b21a-5b9dbfc4f1fd
+		summarizeBy: none
+		sourceColumn: eh_feriado_bancario
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_tempo = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\dim_tempo.csv"),[Delimiter=",", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"tempo_sk", Int64.Type}, {"data_completa", type date}, {"ano", Int64.Type}, {"mes", Int64.Type}, {"dia", Int64.Type}, {"dia_semana", type text}, {"trimestre", Int64.Type}, {"trimestre_fiscal", Int64.Type}, {"eh_fim_mes", type logical}, {"eh_fim_trimestre", type logical}, {"eh_fim_ano", type logical}, {"eh_feriado_bancario", type logical}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

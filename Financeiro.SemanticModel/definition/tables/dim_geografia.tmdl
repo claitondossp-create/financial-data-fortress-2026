@@ -1,0 +1,48 @@
+table dim_geografia
+	lineageTag: b5815784-f2cc-4036-b37f-4a3dc7d8962a
+
+	column geografia_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d042100-27db-4be9-ad11-90b8b40e7a18
+		summarizeBy: none
+		sourceColumn: geografia_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column pais
+		dataType: string
+		lineageTag: d1e9b8a3-b4ef-435a-b921-bce3ba32d8ee
+		summarizeBy: none
+		sourceColumn: pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column continente
+		dataType: string
+		lineageTag: 166f94cf-e959-476a-83d6-f365b7b884b0
+		summarizeBy: none
+		sourceColumn: continente
+
+		annotation SummarizationSetBy = Automatic
+
+	column regiao
+		dataType: string
+		lineageTag: 3aa79402-0c12-45c6-a7f4-a57ac12d95ab
+		summarizeBy: none
+		sourceColumn: regiao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_geografia = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\dim_geografia.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"geografia_sk", Int64.Type}, {"pais", type text}, {"continente", type text}, {"regiao", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

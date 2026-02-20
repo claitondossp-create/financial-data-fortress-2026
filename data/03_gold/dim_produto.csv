@@ -1,4 +1,4 @@
-produto_sk,produto_nome,preco_fabricacao,categoria_preco
+produto_sk,nome_produto,preco_fabricacao,categoria_preco
 1, Carretera ,3.0,Low
 2, Montana ,5.0,Low
 3, Paseo ,10.0,Low

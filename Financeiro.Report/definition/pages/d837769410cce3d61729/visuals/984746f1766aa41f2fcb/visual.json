@@ -1,0 +1,90 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "984746f1766aa41f2fcb",
+  "position": {
+    "x": 284.16502946954813,
+    "y": 485.343811394892,
+    "z": 8000,
+    "height": 203.69351669941062,
+    "width": 413.67387033398825,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_segmento"
+                    }
+                  },
+                  "Property": "segmento_nome"
+                }
+              },
+              "queryRef": "dim_segmento.segmento_nome",
+              "nativeQueryRef": "segmento_nome",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas Insights"
+                    }
+                  },
+                  "Property": "Receita Total"
+                }
+              },
+              "queryRef": "Medidas Insights.Receita Total",
+              "nativeQueryRef": "Receita Total"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas Insights"
+                  }
+                },
+                "Property": "Receita Total"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

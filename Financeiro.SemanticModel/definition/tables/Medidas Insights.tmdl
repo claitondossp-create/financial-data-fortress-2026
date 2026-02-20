@@ -1,0 +1,366 @@
+table 'Medidas Insights'
+	lineageTag: c7b9cca3-a378-4a3b-a67e-db4fcfa5a60f
+
+	/// Soma da receita liquida total
+	measure 'Receita Total' = SUM(fato_financeiro[venda_liquida])
+		formatString: $#,##0.00
+		displayFolder: 1. KPIs Estrategicos
+		lineageTag: 1f983450-b2e4-49cf-b8d7-33095aeb321f
+
+	/// Soma do lucro total
+	measure 'Lucro Total' = SUM(fato_financeiro[lucro])
+		formatString: $#,##0.00
+		displayFolder: 1. KPIs Estrategicos
+		lineageTag: d6af745a-ef63-4ef8-81c7-23bc4475eab5
+
+	/// Margem bruta percentual
+	measure 'Margem Bruta %' = DIVIDE([Lucro Total], [Receita Total], 0)
+		formatString: 0.0%
+		displayFolder: 1. KPIs Estrategicos
+		lineageTag: 7c2f2198-458f-4e5a-99c8-363586759b35
+
+	/// Total de unidades vendidas
+	measure 'Unidades Vendidas' = SUM(fato_financeiro[unidades_vendidas])
+		formatString: #,##0
+		displayFolder: 1. KPIs Estrategicos
+		lineageTag: 9d3281b1-35a4-4b0a-90fc-70c599cec314
+
+	/// Custo total dos produtos vendidos
+	measure 'Custo Total (CPV)' = SUM(fato_financeiro[custo_bens_vendidos])
+		formatString: $#,##0.00
+		displayFolder: 1. KPIs Estrategicos
+		lineageTag: 50728796-c99d-41d2-bfa3-f60b22397c56
+
+	/// Valor medio por unidade vendida
+	measure 'Ticket Medio' = DIVIDE([Receita Total], [Unidades Vendidas], 0)
+		formatString: $#,##0.00
+		displayFolder: 1. KPIs Estrategicos
+		lineageTag: 1044f6ce-e364-416c-8197-3f7acd84cc9b
+
+	/// Crescimento mes a mes
+	measure 'Crescimento MoM %' = VAR Atual = [Receita Total] VAR Anterior = CALCULATE([Receita Total], DATEADD(dim_tempo[data_completa], -1, MONTH)) RETURN DIVIDE(Atual - Anterior, Anterior, BLANK())
+		formatString: 0.0%
+		displayFolder: 2. Inteligencia Temporal
+		lineageTag: 8c6ab352-c54a-4937-9ba8-9c5dda6577e9
+
+	/// Receita acumulada YTD
+	measure 'Receita Acumulada Ano' = TOTALYTD([Receita Total], dim_tempo[data_completa])
+		formatString: $#,##0.00
+		displayFolder: 2. Inteligencia Temporal
+		lineageTag: 920d356d-0ec2-48d3-a969-0cfb7096ba81
+
+	/// Media movel 3 meses
+	measure 'Media Movel 3 Meses' = AVERAGEX(DATESINPERIOD(dim_tempo[data_completa], MAX(dim_tempo[data_completa]), -3, MONTH), [Receita Total])
+		formatString: $#,##0.00
+		displayFolder: 2. Inteligencia Temporal
+		lineageTag: ebb0afa7-31d6-46e6-bfab-43098496304a
+
+	/// Lucro acumulado YTD
+	measure 'Lucro Acumulado Ano' = TOTALYTD([Lucro Total], dim_tempo[data_completa])
+		formatString: $#,##0.00
+		displayFolder: 2. Inteligencia Temporal
+		lineageTag: 62444d28-6b80-4ad6-bf27-f78349a1f1be
+
+	/// Ranking receita por pais
+	measure 'Ranking Receita por Pais' = RANKX(ALL(dim_geografia[pais]), [Receita Total], , DESC, DENSE)
+		formatString: 0
+		displayFolder: 3. Performance Geografica
+		lineageTag: 121b2e1f-c38c-402f-9f49-a79b07b5ade4
+
+	/// Ranking lucro por pais
+	measure 'Ranking Lucro por Pais' = RANKX(ALL(dim_geografia[pais]), [Lucro Total], , DESC, DENSE)
+		formatString: 0
+		displayFolder: 3. Performance Geografica
+		lineageTag: a268cce7-3897-4751-ad0b-0126d7ccf505
+
+	/// Contribuicao do pais
+	measure 'Contribuicao do Pais %' = DIVIDE([Receita Total], CALCULATE([Receita Total], ALL(dim_geografia)), 0)
+		formatString: 0.0%
+		displayFolder: 3. Performance Geografica
+		lineageTag: 2abd0c8f-4ddd-49a7-a944-da64c55e6e91
+
+	/// Participacao do segmento
+	measure 'Participacao Segmento %' = DIVIDE([Receita Total], CALCULATE([Receita Total], ALL(dim_segmento)), 0)
+		formatString: 0.0%
+		displayFolder: 4. Analise por Segmento
+		lineageTag: 0d593fb6-ddff-418c-9da3-46c746eb4e01
+
+	/// Margem de lucro por segmento
+	measure 'Margem Lucro Segmento %' = DIVIDE([Lucro Total], [Receita Total], 0)
+		formatString: 0.0%
+		displayFolder: 4. Analise por Segmento
+		lineageTag: 2614866c-a2cf-4b09-9040-b2322a5e0eed
+
+	/// Total de transacoes
+	measure 'Total Transacoes' = COUNTROWS(fato_financeiro)
+		formatString: #,##0
+		displayFolder: 5. Diagnostico de Descontos
+		lineageTag: b691b611-5149-4da5-bb8d-17e3c6356fac
+
+	/// Margem por faixa de desconto
+	measure 'Margem por Faixa Desconto' = DIVIDE([Lucro Total], [Receita Total], 0)
+		formatString: 0.0%
+		displayFolder: 5. Diagnostico de Descontos
+		lineageTag: 51f90d16-4e9d-414e-ace9-e3e4a7729f39
+
+	/// Alerta desconto alto
+	measure 'Alerta Desconto Alto' = VAR M = CALCULATE([Margem Bruta %], dim_desconto[faixa_desconto] = "High") RETURN IF(M < 0.10, "ALERTA: Margem critica", "OK")
+		displayFolder: 5. Diagnostico de Descontos
+		lineageTag: 42938706-1e10-4013-8035-cd09e82f65bb
+
+	/// Ranking de lucro por produto
+	measure 'Ranking Lucro Produto' = RANKX(ALL(dim_produto[produto_nome]), [Lucro Total], , DESC, DENSE)
+		formatString: 0
+		displayFolder: 6. Analise de Produto
+		lineageTag: b79237ac-44a7-45c8-a9a9-12c87b99deca
+
+	/// Participacao do produto na receita
+	measure 'Participacao Produto %' = DIVIDE([Receita Total], CALCULATE([Receita Total], ALL(dim_produto)), 0)
+		formatString: 0.0%
+		displayFolder: 6. Analise de Produto
+		lineageTag: 7a07f66d-9773-4235-9b78-a78a137d78cd
+
+	/// Diferenca margem vs media
+	measure 'Margem vs Media' = VAR Atual = [Margem Bruta %] VAR Media = CALCULATE([Margem Bruta %], ALL(dim_produto)) RETURN Atual - Media
+		formatString: +0.0%;-0.0%
+		displayFolder: 6. Analise de Produto
+		lineageTag: e3765753-5a80-4705-af15-5c1eaf883561
+
+	/// Classificacao BCG
+	measure 'Categoria BCG' = VAR CM = [Margem Bruta %] VAR CV = [Unidades Vendidas] VAR AM = CALCULATE([Margem Bruta %], ALL(dim_produto)) VAR AV = CALCULATE([Unidades Vendidas], ALL(dim_produto)) RETURN SWITCH(TRUE(), CM > AM && CV > AV, "Estrela", CM > AM && CV <= AV, "Vaca Leiteira", CM <= AM && CV > AV, "Interrogacao", "Abacaxi")
+		displayFolder: 6. Analise de Produto
+		lineageTag: bb2b6cbb-52bb-4745-beda-3dd941206942
+
+	/// Indice de sazonalidade
+	measure 'Indice Sazonalidade' = VAR MS = [Receita Total] VAR MED = DIVIDE(CALCULATE([Receita Total], ALL(dim_tempo[mes])), DISTINCTCOUNT(dim_tempo[mes]), 0) RETURN DIVIDE(MS, MED, 0)
+		formatString: 0.00
+		displayFolder: 7. Sazonalidade
+		lineageTag: 70a23bce-b897-4e93-8439-981dfd40bdfa
+
+	/// Melhor trimestre
+	measure 'Melhor Trimestre' = VAR Q1 = CALCULATE([Receita Total], dim_tempo[trimestre] = 1) VAR Q2 = CALCULATE([Receita Total], dim_tempo[trimestre] = 2) VAR Q3 = CALCULATE([Receita Total], dim_tempo[trimestre] = 3) VAR Q4 = CALCULATE([Receita Total], dim_tempo[trimestre] = 4) VAR MX = MAX(MAX(Q1, Q2), MAX(Q3, Q4)) RETURN SWITCH(MX, Q1, "T1", Q2, "T2", Q3, "T3", Q4, "T4")
+		displayFolder: 7. Sazonalidade
+		lineageTag: 2a137a4a-9bf9-4113-8a44-bdd15ec733bd
+
+	/// Card SVG dinamico para Receita Total com comparacao YoY (compacto)
+	measure 'SVG Receita Total' =
+			VAR _v = [Receita Total]
+			VAR _m = _v / 1000000
+			VAR _fmt = "$" & FORMAT(_m, "#,##0.0") & "M"
+			VAR _ant = CALCULATE([Receita Total], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _pct = DIVIDE(_v - _ant, _ant, 0)
+			VAR _pctVal = ABS(_pct) * 100
+			VAR _pctFmt = FORMAT(_pctVal, "0.0") & "%25"
+			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
+			VAR _corS = IF(_pct >= 0, "%2310B981", "%23F43F5E")
+			VAR _sub = IF(ISBLANK(_ant), "sem dados", _seta & " " & _pctFmt & " vs anterior")
+			RETURN
+			"data:image/svg+xml;utf8," &
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 190 85'>" &
+			"<rect width='190' height='85' rx='10' fill='%23111827' stroke='%231E293B' stroke-width='1'/>" &
+			"<rect y='81' width='190' height='4' rx='0 0 10 10' fill='%233B82F6'/>" &
+			"<text x='12' y='20' fill='%2364748B' font-size='9' font-family='Segoe UI' font-weight='600'>RECEITA TOTAL</text>" &
+			"<text x='12' y='50' fill='%2338BDF8' font-size='24' font-family='Segoe UI' font-weight='700'>" & _fmt & "</text>" &
+			"<text x='12' y='70' fill='" & _corS & "' font-size='9' font-family='Segoe UI'>" & _sub & "</text>" &
+			"<circle cx='168' cy='20' r='12' fill='%230F172A'/>" &
+			"<text x='168' y='25' fill='%233B82F6' font-size='12' font-family='Segoe UI' text-anchor='middle'>$</text>" &
+			"</svg>"
+		displayFolder: 0. SVG Cards
+		lineageTag: 5529094c-26b2-4182-81cd-996793df32dc
+		dataCategory: ImageUrl
+
+	/// Card SVG dinamico para Lucro Total com comparacao YoY
+	measure 'SVG Lucro Total' =
+			VAR _v = [Lucro Total]
+			VAR _m = _v / 1000000
+			VAR _fmt = "$" & FORMAT(_m, "#,##0.0") & "M"
+			VAR _ant = CALCULATE([Lucro Total], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _pct = DIVIDE(_v - _ant, _ant, 0)
+			VAR _pctVal = ABS(_pct) * 100
+			VAR _pctFmt = FORMAT(_pctVal, "0.0") & "%25"
+			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
+			VAR _corS = IF(_pct >= 0, "%2310B981", "%23F43F5E")
+			VAR _sub = IF(ISBLANK(_ant), "sem dados", _seta & " " & _pctFmt & " vs anterior")
+			RETURN
+			"data:image/svg+xml;utf8," &
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 110' preserveAspectRatio='xMidYMid meet'>" &
+			"<rect width='250' height='110' rx='12' fill='%23111827' stroke='%231E293B' stroke-width='1'/>" &
+			"<rect y='107' width='250' height='6' fill='%2310B981'/>" &
+			"<text x='16' y='26' fill='%2364748B' font-size='10' font-family='Segoe UI' font-weight='600'>LUCRO TOTAL</text>" &
+			"<text x='16' y='65' fill='%2310B981' font-size='28' font-family='Segoe UI' font-weight='700'>" & _fmt & "</text>" &
+			"<text x='16' y='90' fill='" & _corS & "' font-size='11' font-family='Segoe UI'>" & _sub & "</text>" &
+			"<circle cx='222' cy='26' r='14' fill='%230F172A'/>" &
+			"<text x='222' y='32' fill='%2310B981' font-size='14' font-family='Segoe UI' text-anchor='middle'>T</text>" &
+			"</svg>"
+		displayFolder: 0. SVG Cards
+		lineageTag: f9689774-4c73-49a2-ba63-fd54020b823f
+		dataCategory: ImageUrl
+
+	/// Card SVG dinamico para Margem Bruta vs meta 15%
+	measure 'SVG Margem Bruta' =
+			VAR _v = [Margem Bruta %]
+			VAR _m = _v / 0,01
+			VAR _fmt = "" & FORMAT(_m, "#,##0.0") & "%25"
+			VAR _ant = CALCULATE([Margem Bruta %], --DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _pct = DIVIDE(_v - _ant, _ant, 0)
+			VAR _pctVal = ABS(_pct) * 100
+			VAR _pctFmt = FORMAT(_pctVal, "0.0") & "%25"
+			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
+			VAR _corS = IF(_pct >= 0, "%2310B981", "%23F43F5E")
+			VAR _sub = IF([Margem Bruta %]>=0.15, UNICHAR(9650) & " acima meta 15%25", UNICHAR(9660) & " abaixo meta 15%25")
+			RETURN
+			"data:image/svg+xml;utf8," &
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 110' preserveAspectRatio='xMidYMid meet'>" &
+			"<rect width='250' height='110' rx='12' fill='%23111827' stroke='%231E293B' stroke-width='1'/>" &
+			"<rect y='107' width='250' height='6' fill='%23F59E0B'/>" &
+			"<text x='16' y='26' fill='%2364748B' font-size='10' font-family='Segoe UI' font-weight='600'>MARGEM BRUTA</text>" &
+			"<text x='16' y='65' fill='%23F59E0B' font-size='28' font-family='Segoe UI' font-weight='700'>" & _fmt & "</text>" &
+			"<text x='16' y='90' fill='" & _corS & "' font-size='11' font-family='Segoe UI'>" & _sub & "</text>" &
+			"<circle cx='222' cy='26' r='14' fill='%230F172A'/>" &
+			"<text x='222' y='32' fill='%23F59E0B' font-size='14' font-family='Segoe UI' text-anchor='middle'>%</text>" &
+			"</svg>"
+		displayFolder: 0. SVG Cards
+		lineageTag: e8d45116-6c1b-4e98-a82a-ea66e844339e
+		dataCategory: ImageUrl
+
+	/// Card SVG dinamico para Unidades Vendidas com comparacao YoY
+	measure 'SVG Unidades Vendidas' =
+			VAR _v = [Unidades Vendidas]
+			VAR _m = _v / 1000000
+			VAR _fmt = "" & FORMAT(_m, "#,##0.0") & "M"
+			VAR _ant = CALCULATE([Unidades Vendidas], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _pct = DIVIDE(_v - _ant, _ant, 0)
+			VAR _pctVal = ABS(_pct) * 100
+			VAR _pctFmt = FORMAT(_pctVal, "0.0") & "%25"
+			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
+			VAR _corS = IF(_pct >= 0, "%2310B981", "%23F43F5E")
+			VAR _sub = IF(ISBLANK(_ant), "sem dados", _seta & " " & _pctFmt & " vs anterior")
+			RETURN
+			"data:image/svg+xml;utf8," &
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 110' preserveAspectRatio='xMidYMid meet'>" &
+			"<rect width='250' height='110' rx='12' fill='%23111827' stroke='%231E293B' stroke-width='1'/>" &
+			"<rect y='107' width='250' height='6' fill='%238B5CF6'/>" &
+			"<text x='16' y='26' fill='%2364748B' font-size='10' font-family='Segoe UI' font-weight='600'>UNIDADES VENDIDAS</text>" &
+			"<text x='16' y='65' fill='%238B5CF6' font-size='28' font-family='Segoe UI' font-weight='700'>" & _fmt & "</text>" &
+			"<text x='16' y='90' fill='" & _corS & "' font-size='11' font-family='Segoe UI'>" & _sub & "</text>" &
+			"<circle cx='222' cy='26' r='14' fill='%230F172A'/>" &
+			"<text x='222' y='32' fill='%238B5CF6' font-size='14' font-family='Segoe UI' text-anchor='middle'>#</text>" &
+			"</svg>"
+		displayFolder: 0. SVG Cards
+		lineageTag: 667075b3-e6d1-4a6e-9639-354d4975d391
+		dataCategory: ImageUrl
+
+	/// Card SVG dinamico para Custo Total mostrando % da receita
+	measure 'SVG Custo CPV' =
+			VAR _v = [Custo Total (CPV)]
+			VAR _m = _v / 1000000
+			VAR _fmt = "$" & FORMAT(_m, "#,##0.0") & "M"
+			VAR _ant = CALCULATE([Custo Total (CPV)], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _pct = DIVIDE(_v - _ant, _ant, 0)
+			VAR _pctVal = ABS(_pct) * 100
+			VAR _pctFmt = FORMAT(_pctVal, "0.0") & "%25"
+			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
+			VAR _corS = IF(_pct >= 0, "%2310B981", "%23F43F5E")
+			VAR _sub = IF(ISBLANK(_ant), "da receita", _seta & " " & _pctFmt & " vs anterior")
+			RETURN
+			"data:image/svg+xml;utf8," &
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 110' preserveAspectRatio='xMidYMid meet'>" &
+			"<rect width='250' height='110' rx='12' fill='%23111827' stroke='%231E293B' stroke-width='1'/>" &
+			"<rect y='107' width='250' height='6' fill='%23F43F5E'/>" &
+			"<text x='16' y='26' fill='%2364748B' font-size='10' font-family='Segoe UI' font-weight='600'>CUSTO TOTAL (CPV)</text>" &
+			"<text x='16' y='65' fill='%23F43F5E' font-size='28' font-family='Segoe UI' font-weight='700'>" & _fmt & "</text>" &
+			"<text x='16' y='90' fill='" & _corS & "' font-size='11' font-family='Segoe UI'>" & _sub & "</text>" &
+			"<circle cx='222' cy='26' r='14' fill='%230F172A'/>" &
+			"<text x='222' y='32' fill='%23F43F5E' font-size='14' font-family='Segoe UI' text-anchor='middle'>C</text>" &
+			"</svg>"
+		displayFolder: 0. SVG Cards
+		lineageTag: a741eda5-e612-44b7-a542-8f7e9ad1f467
+		dataCategory: ImageUrl
+
+	/// Card SVG dinamico para Ticket Medio com comparacao YoY
+	measure 'SVG Ticket Medio' =
+			VAR _v = [Ticket Medio]
+			VAR _m = _v / 1
+			VAR _fmt = "$" & FORMAT(_m, "#,##0.0") & ""
+			VAR _ant = CALCULATE([Ticket Medio], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _pct = DIVIDE(_v - _ant, _ant, 0)
+			VAR _pctVal = ABS(_pct) * 100
+			VAR _pctFmt = FORMAT(_pctVal, "0.0") & "%25"
+			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
+			VAR _corS = IF(_pct >= 0, "%2310B981", "%23F43F5E")
+			VAR _sub = IF(ISBLANK(_ant), "estavel", _seta & " " & _pctFmt & " vs anterior")
+			RETURN
+			"data:image/svg+xml;utf8," &
+			"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 250 110' preserveAspectRatio='xMidYMid meet'>" &
+			"<rect width='250' height='110' rx='12' fill='%23111827' stroke='%231E293B' stroke-width='1'/>" &
+			"<rect y='107' width='250' height='6' fill='%2306B6D4'/>" &
+			"<text x='16' y='26' fill='%2364748B' font-size='10' font-family='Segoe UI' font-weight='600'>TICKET MEDIO</text>" &
+			"<text x='16' y='65' fill='%2306B6D4' font-size='28' font-family='Segoe UI' font-weight='700'>" & _fmt & "</text>" &
+			"<text x='16' y='90' fill='" & _corS & "' font-size='11' font-family='Segoe UI'>" & _sub & "</text>" &
+			"<circle cx='222' cy='26' r='14' fill='%230F172A'/>" &
+			"<text x='222' y='32' fill='%2306B6D4' font-size='14' font-family='Segoe UI' text-anchor='middle'>T</text>" &
+			"</svg>"
+		displayFolder: 0. SVG Cards
+		lineageTag: 37293eb7-169a-4297-bf29-e79d3e089293
+		dataCategory: ImageUrl
+
+	/// Variacao percentual da receita total em comparacao ao ano anterior (YoY)
+	measure 'Receita YoY %' =
+			VAR _atual = [Receita Total]
+			VAR _anterior = CALCULATE([Receita Total], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			RETURN
+			    DIVIDE(_atual - _anterior, _anterior, BLANK())
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: 1. KPIs Estrategicos
+		lineageTag: 71ec0a6b-2516-4b06-aa81-b3791a89d076
+
+	/// Texto formatado de variacao YoY para exibir no subtitulo do cartao
+	measure 'Receita YoY Texto' =
+			VAR _atual = [Receita Total]
+			VAR _anterior = CALCULATE([Receita Total], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _pct = DIVIDE(_atual - _anterior, _anterior, BLANK())
+			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
+			VAR _pctFmt = FORMAT(ABS(_pct) * 100, "0.0") & "%"
+			RETURN
+			    IF(ISBLANK(_anterior), "sem dados", _seta & " " & _pctFmt & " vs ano anterior")
+		displayFolder: 1. KPIs Estrategicos
+		lineageTag: 1a97854e-2da0-40b7-9512-1730e89a7682
+
+	measure 'Lucro YoY Texto' =
+			VAR _atual = [Lucro Total]
+			VAR _anterior = CALCULATE([Lucro Total], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _pct = DIVIDE(_atual - _anterior, _anterior, BLANK())
+			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
+			VAR _pctFmt = FORMAT(ABS(_pct) * 100, "0.0") & "%"
+			RETURN
+			    IF(ISBLANK(_anterior), "sem dados", _seta & " " & _pctFmt & " vs ano anterior")
+		displayFolder: 1. KPIs Estrategicos
+
+	measure 'Margem Bruta YoY Texto' =
+			VAR _atual = [Margem Bruta %]
+			VAR _anterior = CALCULATE([Margem Bruta %], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _diffPP = (_atual - _anterior) * 100
+			VAR _seta = IF(_diffPP >= 0, UNICHAR(9650), UNICHAR(9660))
+			VAR _diffFmt = FORMAT(ABS(_diffPP), "0.0") & "pp"
+			RETURN
+			    IF(ISBLANK(_anterior), "sem dados", _seta & " " & _diffFmt & " vs ano anterior")
+		displayFolder: 1. KPIs Estrategicos
+
+	measure 'Unidades Vendidas YoY Texto' =
+			VAR _atual = [Unidades Vendidas]
+			VAR _anterior = CALCULATE([Unidades Vendidas], DATEADD(dim_tempo[data_completa], -1, YEAR))
+			VAR _pct = DIVIDE(_atual - _anterior, _anterior, BLANK())
+			VAR _seta = IF(_pct >= 0, UNICHAR(9650), UNICHAR(9660))
+			VAR _pctFmt = FORMAT(ABS(_pct) * 100, "0.0") & "%"
+			RETURN
+			    IF(ISBLANK(_anterior), "sem dados", _seta & " " & _pctFmt & " vs ano anterior")
+		displayFolder: 1. KPIs Estrategicos
+
+	column Placeholder
+		lineageTag: d9e09d57-efd7-4155-951c-c25cb6fbb8c0
+		isNameInferred
+		sourceColumn: [Placeholder]
+
+	partition 'Medidas Insights_part' = calculated
+		source = ROW("Placeholder", 1)
+

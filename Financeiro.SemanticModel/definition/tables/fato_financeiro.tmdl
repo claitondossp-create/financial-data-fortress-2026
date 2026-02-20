@@ -1,0 +1,104 @@
+table fato_financeiro
+	lineageTag: 6b216d53-2ee0-4459-9b22-5d6758b272fb
+
+	column fato_financeiro_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 550fcb29-0e44-4a43-9874-828201bb5024
+		summarizeBy: sum
+		sourceColumn: fato_financeiro_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column produto_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b24fa22-33cd-430e-8306-82c347e780fa
+		summarizeBy: none
+		sourceColumn: produto_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column geografia_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: ad189bbc-1155-453b-9852-a84176b23584
+		summarizeBy: none
+		sourceColumn: geografia_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column segmento_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: d9310004-b068-4c52-ba06-062e36893e16
+		summarizeBy: none
+		sourceColumn: segmento_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column desconto_sk
+		dataType: string
+		lineageTag: 2337a036-2e93-464c-b860-3647c7e10cc7
+		summarizeBy: none
+		sourceColumn: desconto_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempo_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: b929db35-6c82-4b6f-ba26-8d679c0efba7
+		summarizeBy: none
+		sourceColumn: tempo_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidades_vendidas
+		dataType: int64
+		formatString: 0
+		lineageTag: 06023d4f-6f14-42a4-ba52-add158950d9f
+		summarizeBy: sum
+		sourceColumn: unidades_vendidas
+
+		annotation SummarizationSetBy = Automatic
+
+	column venda_liquida
+		dataType: int64
+		formatString: 0
+		lineageTag: c0ff3538-2f0a-4e86-8791-66cbddc20cf0
+		summarizeBy: sum
+		sourceColumn: venda_liquida
+
+		annotation SummarizationSetBy = Automatic
+
+	column custo_bens_vendidos
+		dataType: int64
+		formatString: 0
+		lineageTag: c838ec70-0330-4f44-a171-d1b8ea7b4505
+		summarizeBy: sum
+		sourceColumn: custo_bens_vendidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column lucro
+		dataType: int64
+		formatString: 0
+		lineageTag: 54227eab-a06f-4091-92a9-746a6d4fe16f
+		summarizeBy: sum
+		sourceColumn: lucro
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fato_financeiro = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\fato_financeiro.csv"),[Delimiter=",", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"fato_financeiro_sk", Int64.Type}, {"produto_sk", Int64.Type}, {"geografia_sk", Int64.Type}, {"segmento_sk", Int64.Type}, {"desconto_sk", type text}, {"tempo_sk", Int64.Type}, {"unidades_vendidas", Int64.Type}, {"venda_liquida", Int64.Type}, {"custo_bens_vendidos", Int64.Type}, {"lucro", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

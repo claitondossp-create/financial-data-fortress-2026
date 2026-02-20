@@ -1,5 +1,5 @@
-desconto_sk,faixa_desconto,percentual_min,percentual_max
-1,None,0.0,0.0
+desconto_sk,faixa_desconto,percentual_minimo,percentual_maximo
+1,,0.0,0.0
 2,Low,0.01,5.0
 3,Medium,5.01,10.0
 4,High,10.01,20.0

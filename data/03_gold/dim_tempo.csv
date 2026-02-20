@@ -1,4 +1,4 @@
-tempo_sk,data_completa,ano,mes,dia,dia_semana,trimestre,trimestre_fiscal,eh_fim_mes,eh_fim_trimestre,eh_fim_ano,eh_feriado_bancario
+tempo_sk,data_completa,ano,mes,dia,dia_semana,trimestre,trimestre_fiscal,fim_de_mes,fim_de_trimestre,fim_de_ano,feriado_bancario
 1,2013-09-01,2013,9,1,Sunday,3,3,False,False,False,False
 2,2013-09-02,2013,9,2,Monday,3,3,False,False,False,True
 3,2013-09-03,2013,9,3,Tuesday,3,3,False,False,False,False

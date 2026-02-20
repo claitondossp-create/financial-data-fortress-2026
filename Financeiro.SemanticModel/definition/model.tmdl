@@ -1,0 +1,26 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["dim_desconto","dim_geografia","dim_produto","dim_segmento","dim_tempo","fato_financeiro"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_desconto
+ref table dim_geografia
+ref table dim_produto
+ref table dim_segmento
+ref table dim_tempo
+ref table DateTableTemplate_1574937f-6e4e-4378-b7fc-31fdc8f19c08
+ref table LocalDateTable_97173e70-0320-4ec5-a7f1-cb66518ec2f1
+ref table fato_financeiro
+ref table 'Medidas Insights'
+
+ref cultureInfo pt-BR
+

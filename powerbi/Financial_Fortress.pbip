@@ -1,0 +1,13 @@
+﻿{
+    "version":  "1.0",
+    "artifacts":  [
+                      {
+                          "report":  {
+                                         "path":  "Financial_Fortress.Report"
+                                     }
+                      }
+                  ],
+    "settings":  {
+                     "enableAutoRecovery":  true
+                 }
+}

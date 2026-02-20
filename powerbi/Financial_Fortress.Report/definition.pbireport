@@ -1,0 +1,9 @@
+﻿{
+    "version":  "4.0",
+    "datasetReference":  {
+                             "byConnection":  null,
+                             "byPath":  {
+                                            "path":  "../Financial_Fortress.Dataset"
+                                        }
+                         }
+}

@@ -1,0 +1,2180 @@
+﻿{
+  "name": "64897e1f-2610-48d2-a61f-b5416f2a22c0",
+  "compatibilityLevel": 1600,
+  "createdTimestamp": "2026-02-18T23:59:10.086667-03:00",
+  "lastUpdate": "2026-02-19T01:09:55.803333-03:00",
+  "lastSchemaUpdate": "2026-02-18T23:59:10.086667-03:00",
+  "lastProcessed": "2026-02-19T00:54:54.566667-03:00",
+  "model": {
+    "culture": "pt-BR",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "pt-BR",
+    "modifiedTime": "2026-02-19T02:59:10.143333",
+    "structureModifiedTime": "2026-02-19T03:57:16.766667",
+    "tables": [
+      {
+        "name": "dim_desconto",
+        "lineageTag": "fddf2728-d444-4fde-b532-618093fe8a03",
+        "modifiedTime": "2026-02-19T03:53:55.923333",
+        "structureModifiedTime": "2026-02-19T03:53:55.923333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-02-19T03:53:55.926667",
+            "structureModifiedTime": "2026-02-19T03:53:55.923333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:53:58.116667",
+              "refreshedTime": "2026-02-19T03:53:58.116667"
+            }
+          },
+          {
+            "name": "desconto_sk",
+            "dataType": "int64",
+            "sourceColumn": "desconto_sk",
+            "formatString": "0",
+            "lineageTag": "fe1d3f27-6eb1-4435-84d2-6581e2fdcde4",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:53:55.923333",
+            "structureModifiedTime": "2026-02-19T03:53:55.923333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:53:58.116667",
+              "refreshedTime": "2026-02-19T03:53:58.116667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:53:55.926667"
+              }
+            ]
+          },
+          {
+            "name": "faixa_desconto",
+            "dataType": "string",
+            "sourceColumn": "faixa_desconto",
+            "lineageTag": "07d3163f-4799-4f76-984c-883c04c8af62",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:53:55.923333",
+            "structureModifiedTime": "2026-02-19T03:53:55.923333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:53:58.116667",
+              "refreshedTime": "2026-02-19T03:53:58.116667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:53:55.926667"
+              }
+            ]
+          },
+          {
+            "name": "percentual_min",
+            "dataType": "int64",
+            "sourceColumn": "percentual_min",
+            "formatString": "0",
+            "lineageTag": "36bed0ad-ccd6-46f7-978c-5ad9e0e18d77",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:53:55.923333",
+            "structureModifiedTime": "2026-02-19T03:53:55.923333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:53:58.116667",
+              "refreshedTime": "2026-02-19T03:53:58.116667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:53:55.926667"
+              }
+            ]
+          },
+          {
+            "name": "percentual_max",
+            "dataType": "int64",
+            "sourceColumn": "percentual_max",
+            "formatString": "0",
+            "lineageTag": "763c9779-8b95-4a22-97dd-607972ad6457",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:53:55.923333",
+            "structureModifiedTime": "2026-02-19T03:53:55.923333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:53:58.116667",
+              "refreshedTime": "2026-02-19T03:53:58.116667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:53:55.926667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_desconto",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:53:57.946667",
+            "refreshedTime": "2026-02-19T03:53:57.946667",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Csv.Document(File.Contents(\"C:\\Users\\Claiton\\Documents\\GitHub\\Conjunto de Dados Financeiros da Empresa\\data\\03_gold\\dim_desconto.csv\"),[Delimiter=\",\", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"desconto_sk\", Int64.Type}, {\"faixa_desconto\", type text}, {\"percentual_min\", Int64.Type}, {\"percentual_max\", Int64.Type}})\nin\n    #\"Tipo Alterado\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-02-19T03:53:55.926667"
+          }
+        ]
+      },
+      {
+        "name": "dim_geografia",
+        "lineageTag": "b5815784-f2cc-4036-b37f-4a3dc7d8962a",
+        "modifiedTime": "2026-02-19T03:54:11.786667",
+        "structureModifiedTime": "2026-02-19T03:54:11.786667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-02-19T03:54:11.786667",
+            "structureModifiedTime": "2026-02-19T03:54:11.786667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:11.85",
+              "refreshedTime": "2026-02-19T03:54:11.85"
+            }
+          },
+          {
+            "name": "geografia_sk",
+            "dataType": "int64",
+            "sourceColumn": "geografia_sk",
+            "formatString": "0",
+            "lineageTag": "5d042100-27db-4be9-ad11-90b8b40e7a18",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:54.693333",
+            "structureModifiedTime": "2026-02-19T03:54:11.786667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:11.85",
+              "refreshedTime": "2026-02-19T03:54:11.85"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:11.786667"
+              }
+            ]
+          },
+          {
+            "name": "pais",
+            "dataType": "string",
+            "sourceColumn": "pais",
+            "lineageTag": "d1e9b8a3-b4ef-435a-b921-bce3ba32d8ee",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:11.786667",
+            "structureModifiedTime": "2026-02-19T03:54:11.786667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:11.85",
+              "refreshedTime": "2026-02-19T03:54:11.85"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:11.786667"
+              }
+            ]
+          },
+          {
+            "name": "continente",
+            "dataType": "string",
+            "sourceColumn": "continente",
+            "lineageTag": "166f94cf-e959-476a-83d6-f365b7b884b0",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:11.786667",
+            "structureModifiedTime": "2026-02-19T03:54:11.786667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:11.85",
+              "refreshedTime": "2026-02-19T03:54:11.85"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:11.786667"
+              }
+            ]
+          },
+          {
+            "name": "regiao",
+            "dataType": "string",
+            "sourceColumn": "regiao",
+            "lineageTag": "3aa79402-0c12-45c6-a7f4-a57ac12d95ab",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:11.786667",
+            "structureModifiedTime": "2026-02-19T03:54:11.786667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:11.85",
+              "refreshedTime": "2026-02-19T03:54:11.85"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:11.786667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_geografia",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:54:11.833333",
+            "refreshedTime": "2026-02-19T03:54:11.833333",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Csv.Document(File.Contents(\"C:\\Users\\Claiton\\Documents\\GitHub\\Conjunto de Dados Financeiros da Empresa\\data\\03_gold\\dim_geografia.csv\"),[Delimiter=\",\", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"geografia_sk\", Int64.Type}, {\"pais\", type text}, {\"continente\", type text}, {\"regiao\", type text}})\nin\n    #\"Tipo Alterado\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-02-19T03:54:11.786667"
+          }
+        ]
+      },
+      {
+        "name": "dim_produto",
+        "lineageTag": "f6c4c366-def7-4ff6-b7ca-4bfb196a2a59",
+        "modifiedTime": "2026-02-19T03:54:21.033333",
+        "structureModifiedTime": "2026-02-19T03:54:21.033333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-02-19T03:54:21.033333",
+            "structureModifiedTime": "2026-02-19T03:54:21.033333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:21.086667",
+              "refreshedTime": "2026-02-19T03:54:21.086667"
+            }
+          },
+          {
+            "name": "produto_sk",
+            "dataType": "int64",
+            "sourceColumn": "produto_sk",
+            "formatString": "0",
+            "lineageTag": "039fdf50-351a-4ceb-b7d5-d0a8052c38a5",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:54.693333",
+            "structureModifiedTime": "2026-02-19T03:54:21.033333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:21.086667",
+              "refreshedTime": "2026-02-19T03:54:21.086667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:21.033333"
+              }
+            ]
+          },
+          {
+            "name": "produto_nome",
+            "dataType": "string",
+            "sourceColumn": "produto_nome",
+            "lineageTag": "ab55a282-a358-44fb-b45f-9c54b9769b3b",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:21.033333",
+            "structureModifiedTime": "2026-02-19T03:54:21.033333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:21.086667",
+              "refreshedTime": "2026-02-19T03:54:21.086667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:21.033333"
+              }
+            ]
+          },
+          {
+            "name": "preco_fabricacao",
+            "dataType": "int64",
+            "sourceColumn": "preco_fabricacao",
+            "formatString": "0",
+            "lineageTag": "e24824c3-9105-4c62-afe8-933fd1e59488",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:54.693333",
+            "structureModifiedTime": "2026-02-19T03:54:21.033333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:21.086667",
+              "refreshedTime": "2026-02-19T03:54:21.086667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:21.033333"
+              }
+            ]
+          },
+          {
+            "name": "categoria_preco",
+            "dataType": "string",
+            "sourceColumn": "categoria_preco",
+            "lineageTag": "3312d5d8-6120-4596-894a-4abc1b2b11cf",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:21.033333",
+            "structureModifiedTime": "2026-02-19T03:54:21.033333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:21.086667",
+              "refreshedTime": "2026-02-19T03:54:21.086667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:21.033333"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_produto",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:54:21.066667",
+            "refreshedTime": "2026-02-19T03:54:21.066667",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Csv.Document(File.Contents(\"C:\\Users\\Claiton\\Documents\\GitHub\\Conjunto de Dados Financeiros da Empresa\\data\\03_gold\\dim_produto.csv\"),[Delimiter=\",\", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"produto_sk\", Int64.Type}, {\"produto_nome\", type text}, {\"preco_fabricacao\", Int64.Type}, {\"categoria_preco\", type text}})\nin\n    #\"Tipo Alterado\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-02-19T03:54:21.033333"
+          }
+        ]
+      },
+      {
+        "name": "dim_segmento",
+        "lineageTag": "690015cd-2d49-427f-b646-6d7cd28bb271",
+        "modifiedTime": "2026-02-19T03:54:32.743333",
+        "structureModifiedTime": "2026-02-19T03:54:32.743333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-02-19T03:54:32.743333",
+            "structureModifiedTime": "2026-02-19T03:54:32.743333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:32.786667",
+              "refreshedTime": "2026-02-19T03:54:32.786667"
+            }
+          },
+          {
+            "name": "segmento_sk",
+            "dataType": "int64",
+            "sourceColumn": "segmento_sk",
+            "formatString": "0",
+            "lineageTag": "5e78cfa9-b301-4d5c-b53e-ccedcc9a94f6",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:54.693333",
+            "structureModifiedTime": "2026-02-19T03:54:32.743333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:32.786667",
+              "refreshedTime": "2026-02-19T03:54:32.786667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:32.743333"
+              }
+            ]
+          },
+          {
+            "name": "segmento_nome",
+            "dataType": "string",
+            "sourceColumn": "segmento_nome",
+            "lineageTag": "c42c813d-722d-4bed-bac0-a4d3687154e1",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:32.743333",
+            "structureModifiedTime": "2026-02-19T03:54:32.743333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:32.786667",
+              "refreshedTime": "2026-02-19T03:54:32.786667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:32.743333"
+              }
+            ]
+          },
+          {
+            "name": "potencial_volume",
+            "dataType": "string",
+            "sourceColumn": "potencial_volume",
+            "lineageTag": "aee16886-48de-4ced-af39-ab9d42118560",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:32.743333",
+            "structureModifiedTime": "2026-02-19T03:54:32.743333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:32.786667",
+              "refreshedTime": "2026-02-19T03:54:32.786667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:32.743333"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_segmento",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:54:32.77",
+            "refreshedTime": "2026-02-19T03:54:32.77",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Csv.Document(File.Contents(\"C:\\Users\\Claiton\\Documents\\GitHub\\Conjunto de Dados Financeiros da Empresa\\data\\03_gold\\dim_segmento.csv\"),[Delimiter=\",\", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"segmento_sk\", Int64.Type}, {\"segmento_nome\", type text}, {\"potencial_volume\", type text}})\nin\n    #\"Tipo Alterado\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-02-19T03:54:32.743333"
+          }
+        ]
+      },
+      {
+        "name": "dim_tempo",
+        "lineageTag": "776c9d32-6ec9-4e0c-be3d-25e6e513d1fb",
+        "modifiedTime": "2026-02-19T03:54:43.04",
+        "structureModifiedTime": "2026-02-19T03:54:43.04",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-02-19T03:54:43.043333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            }
+          },
+          {
+            "name": "tempo_sk",
+            "dataType": "int64",
+            "sourceColumn": "tempo_sk",
+            "formatString": "0",
+            "lineageTag": "6c7d65a0-de92-4703-b64a-520bccd92c17",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:54.693333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "data_completa",
+            "dataType": "dateTime",
+            "sourceColumn": "data_completa",
+            "formatString": "Long Date",
+            "lineageTag": "17aaaf15-642e-4ece-879b-b06ff1a401c6",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "058fa293-96cc-4c42-90ba-6da2ed46ce96",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_97173e70-0320-4ec5-a7f1-cb66518ec2f1",
+                  "hierarchy": "Hierarquia de datas"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "ano",
+            "dataType": "int64",
+            "sourceColumn": "ano",
+            "formatString": "0",
+            "lineageTag": "d55c6d6a-6e6a-4504-b539-9e42813de76a",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "mes",
+            "dataType": "int64",
+            "sourceColumn": "mes",
+            "formatString": "0",
+            "lineageTag": "98f81fbc-f87b-48f2-aa9f-3908b0b97060",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "dia",
+            "dataType": "int64",
+            "sourceColumn": "dia",
+            "formatString": "0",
+            "lineageTag": "cbdf4554-3c34-4a18-8bce-a513ba937fcd",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "dia_semana",
+            "dataType": "string",
+            "sourceColumn": "dia_semana",
+            "lineageTag": "022b1355-9a76-48fc-945b-329001db8e10",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "trimestre",
+            "dataType": "int64",
+            "sourceColumn": "trimestre",
+            "formatString": "0",
+            "lineageTag": "7db209e8-1fcf-4ad4-97f0-b61e954a7387",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "trimestre_fiscal",
+            "dataType": "int64",
+            "sourceColumn": "trimestre_fiscal",
+            "formatString": "0",
+            "lineageTag": "92b7606a-a958-4dea-8ba3-d203fb1f9604",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "eh_fim_mes",
+            "dataType": "boolean",
+            "sourceColumn": "eh_fim_mes",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "9944c4c0-c8aa-43d7-80ae-cbbc404736d8",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "eh_fim_trimestre",
+            "dataType": "boolean",
+            "sourceColumn": "eh_fim_trimestre",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "c2d82797-b58a-4ba9-a573-e3bcd790c16c",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "eh_fim_ano",
+            "dataType": "boolean",
+            "sourceColumn": "eh_fim_ano",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "05ca827c-c6ca-4c44-9a3b-72e4481ff4d2",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "name": "eh_feriado_bancario",
+            "dataType": "boolean",
+            "sourceColumn": "eh_feriado_bancario",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "32474d69-e70e-44ef-b21a-5b9dbfc4f1fd",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.04",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:43.146667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_tempo",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:54:43.106667",
+            "refreshedTime": "2026-02-19T03:54:43.106667",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Csv.Document(File.Contents(\"C:\\Users\\Claiton\\Documents\\GitHub\\Conjunto de Dados Financeiros da Empresa\\data\\03_gold\\dim_tempo.csv\"),[Delimiter=\",\", Columns=12, Encoding=1252, QuoteStyle=QuoteStyle.None]),\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"tempo_sk\", Int64.Type}, {\"data_completa\", type date}, {\"ano\", Int64.Type}, {\"mes\", Int64.Type}, {\"dia\", Int64.Type}, {\"dia_semana\", type text}, {\"trimestre\", Int64.Type}, {\"trimestre_fiscal\", Int64.Type}, {\"eh_fim_mes\", type logical}, {\"eh_fim_trimestre\", type logical}, {\"eh_fim_ano\", type logical}, {\"eh_feriado_bancario\", type logical}})\nin\n    #\"Tipo Alterado\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-02-19T03:54:43.04"
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_1574937f-6e4e-4378-b7fc-31fdc8f19c08",
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "8671ad0a-ea34-4aa3-bb8d-f403dc9478be",
+        "modifiedTime": "2026-02-19T03:54:43.04",
+        "structureModifiedTime": "2026-02-19T03:54:43.04",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-02-19T03:54:43.043333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.063333",
+              "refreshedTime": "2026-02-19T03:54:54.546667"
+            }
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "formatString": "General Date",
+            "lineageTag": "806f9623-230e-4a58-bfc5-c91be21d46bb",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.063333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.063333",
+              "refreshedTime": "2026-02-19T03:54:54.546667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Ano",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "lineageTag": "0949a7b2-b34e-4f58-b3f9-f0901e09bb2c",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.063333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.546667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.063333",
+              "refreshedTime": "2026-02-19T03:54:54.546667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "lineageTag": "2a8b2a4b-eb02-4cee-8fd2-9c43a3ce7bb4",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.063333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.546667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.066667",
+              "refreshedTime": "2026-02-19T03:54:54.546667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Mês",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "lineageTag": "9e2ed8ff-31c2-4034-a7cf-3e3af790ff67",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.066667",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.546667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.066667",
+              "refreshedTime": "2026-02-19T03:54:54.55"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "lineageTag": "45c395a4-bcf1-495a-8079-727c84352bb8",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.066667",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.55",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.066667",
+              "refreshedTime": "2026-02-19T03:54:54.55"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Trimestre",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "lineageTag": "2fa65a41-9150-467f-8b3b-e1e69f732c8d",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.066667",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.55",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.07",
+              "refreshedTime": "2026-02-19T03:54:54.55"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Dia",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "lineageTag": "0c3f1fca-b61d-4fca-b11f-1ea76f7f7ebf",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.063333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.546667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.063333",
+              "refreshedTime": "2026-02-19T03:54:54.55"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DateTableTemplate_1574937f-6e4e-4378-b7fc-31fdc8f19c08",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:54:43.063333",
+            "refreshedTime": "2026-02-19T03:54:54.543333",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "lineageTag": "2a817c84-4902-4201-bcac-75569649c02e",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:54:43.07",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.553333",
+            "levels": [
+              {
+                "name": "Ano",
+                "ordinal": 0,
+                "column": "Ano",
+                "lineageTag": "435150af-e2a4-4699-8c36-cd24763e9fc9",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "Trimestre",
+                "ordinal": 1,
+                "column": "Trimestre",
+                "lineageTag": "e5815a72-56e7-42a3-ac08-ad8cc8c5ae8e",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "Mês",
+                "ordinal": 2,
+                "column": "Mês",
+                "lineageTag": "d125f502-be32-4e57-b689-f725114775ab",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "Dia",
+                "ordinal": 3,
+                "column": "Dia",
+                "lineageTag": "a4883dae-84f7-4541-81e3-b9e72155e6c2",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true",
+            "modifiedTime": "2026-02-19T03:54:43.04"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy",
+            "modifiedTime": "2026-02-19T03:54:43.04"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_97173e70-0320-4ec5-a7f1-cb66518ec2f1",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "lineageTag": "1ad76e6a-dd5c-48ea-8514-b8310a227021",
+        "modifiedTime": "2026-02-19T03:54:43.04",
+        "structureModifiedTime": "2026-02-19T03:54:43.04",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-02-19T03:54:43.146667",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:54.546667"
+            }
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "formatString": "General Date",
+            "lineageTag": "f7056f3f-e1ad-4183-9516-2f5134a1bed4",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.146667",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.146667",
+              "refreshedTime": "2026-02-19T03:54:54.546667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Ano",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "formatString": "0",
+            "lineageTag": "1a327052-888c-435d-8f65-246a2347f5c3",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.153333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.546667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.153333",
+              "refreshedTime": "2026-02-19T03:54:54.546667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "formatString": "0",
+            "lineageTag": "8247be78-de3a-4557-a7a2-689843b5c0e6",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.153333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.546667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.153333",
+              "refreshedTime": "2026-02-19T03:54:54.55"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Mês",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "lineageTag": "d0942fb5-5c49-4811-8726-9c8176808029",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.153333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.55",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.153333",
+              "refreshedTime": "2026-02-19T03:54:54.55"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "formatString": "0",
+            "lineageTag": "550323f6-76a3-42bb-a7e3-f7fe8cc145e3",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.153333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.55",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.153333",
+              "refreshedTime": "2026-02-19T03:54:54.55"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Trimestre",
+            "dataType": "string",
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "lineageTag": "6a9031fc-2255-431d-9b5b-51eadfe0dde0",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.153333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.553333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.153333",
+              "refreshedTime": "2026-02-19T03:54:54.553333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Dia",
+            "dataType": "int64",
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "formatString": "0",
+            "lineageTag": "3541ee32-c347-42fd-be1f-1aafd7f38f4b",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:43.153333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.546667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:43.153333",
+              "refreshedTime": "2026-02-19T03:54:54.55"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_97173e70-0320-4ec5-a7f1-cb66518ec2f1",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:54:43.146667",
+            "refreshedTime": "2026-02-19T03:54:54.543333",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('dim_tempo'[data_completa])), 1, 1), Date(Year(MAX('dim_tempo'[data_completa])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Hierarquia de datas",
+            "lineageTag": "1e6bfa25-7098-41ce-84e2-c15b038bc14d",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:54:43.153333",
+            "structureModifiedTime": "2026-02-19T03:54:43.04",
+            "refreshedTime": "2026-02-19T03:54:54.553333",
+            "levels": [
+              {
+                "name": "Ano",
+                "ordinal": 0,
+                "column": "Ano",
+                "lineageTag": "aba93f73-2c0a-44fc-af9a-2425898e3530",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "Trimestre",
+                "ordinal": 1,
+                "column": "Trimestre",
+                "lineageTag": "1de434f7-6db8-4043-a474-0ba1a3a95b16",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "Mês",
+                "ordinal": 2,
+                "column": "Mês",
+                "lineageTag": "0352f2ea-0ecc-432a-aac2-7d53c11347ae",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              },
+              {
+                "name": "Dia",
+                "ordinal": 3,
+                "column": "Dia",
+                "lineageTag": "ef7a97e4-3213-477c-96cd-c8c54b2b7973",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2026-02-19T03:54:43.04"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true",
+            "modifiedTime": "2026-02-19T03:54:43.04"
+          }
+        ]
+      },
+      {
+        "name": "fato_financeiro",
+        "lineageTag": "6b216d53-2ee0-4459-9b22-5d6758b272fb",
+        "modifiedTime": "2026-02-19T03:54:54.52",
+        "structureModifiedTime": "2026-02-19T03:54:54.52",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-02-19T03:54:54.52",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            }
+          },
+          {
+            "name": "fato_financeiro_sk",
+            "dataType": "int64",
+            "sourceColumn": "fato_financeiro_sk",
+            "formatString": "0",
+            "lineageTag": "550fcb29-0e44-4a43-9874-828201bb5024",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:54:54.52",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:54.52"
+              }
+            ]
+          },
+          {
+            "name": "produto_sk",
+            "dataType": "int64",
+            "sourceColumn": "produto_sk",
+            "formatString": "0",
+            "lineageTag": "1b24fa22-33cd-430e-8306-82c347e780fa",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:54.693333",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:54.52"
+              }
+            ]
+          },
+          {
+            "name": "geografia_sk",
+            "dataType": "int64",
+            "sourceColumn": "geografia_sk",
+            "formatString": "0",
+            "lineageTag": "ad189bbc-1155-453b-9852-a84176b23584",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:54.693333",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:54.52"
+              }
+            ]
+          },
+          {
+            "name": "segmento_sk",
+            "dataType": "int64",
+            "sourceColumn": "segmento_sk",
+            "formatString": "0",
+            "lineageTag": "d9310004-b068-4c52-ba06-062e36893e16",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:54.693333",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:54.52"
+              }
+            ]
+          },
+          {
+            "name": "desconto_sk",
+            "dataType": "string",
+            "sourceColumn": "desconto_sk",
+            "lineageTag": "2337a036-2e93-464c-b860-3647c7e10cc7",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:54.52",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:54.52"
+              }
+            ]
+          },
+          {
+            "name": "tempo_sk",
+            "dataType": "int64",
+            "sourceColumn": "tempo_sk",
+            "formatString": "0",
+            "lineageTag": "b929db35-6c82-4b6f-ba26-8d679c0efba7",
+            "summarizeBy": "none",
+            "modifiedTime": "2026-02-19T03:54:54.693333",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:54.52"
+              }
+            ]
+          },
+          {
+            "name": "unidades_vendidas",
+            "dataType": "int64",
+            "sourceColumn": "unidades_vendidas",
+            "formatString": "0",
+            "lineageTag": "06023d4f-6f14-42a4-ba52-add158950d9f",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:54:54.52",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:54.52"
+              }
+            ]
+          },
+          {
+            "name": "venda_liquida",
+            "dataType": "int64",
+            "sourceColumn": "venda_liquida",
+            "formatString": "0",
+            "lineageTag": "c0ff3538-2f0a-4e86-8791-66cbddc20cf0",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:54:54.52",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:54.52"
+              }
+            ]
+          },
+          {
+            "name": "custo_bens_vendidos",
+            "dataType": "int64",
+            "sourceColumn": "custo_bens_vendidos",
+            "formatString": "0",
+            "lineageTag": "c838ec70-0330-4f44-a171-d1b8ea7b4505",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:54:54.52",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:54.52"
+              }
+            ]
+          },
+          {
+            "name": "lucro",
+            "dataType": "int64",
+            "sourceColumn": "lucro",
+            "formatString": "0",
+            "lineageTag": "54227eab-a06f-4091-92a9-746a6d4fe16f",
+            "summarizeBy": "sum",
+            "modifiedTime": "2026-02-19T03:54:54.52",
+            "structureModifiedTime": "2026-02-19T03:54:54.52",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:54:54.61",
+              "refreshedTime": "2026-02-19T03:54:54.61"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2026-02-19T03:54:54.52"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fato_financeiro",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:54:54.566667",
+            "refreshedTime": "2026-02-19T03:54:54.566667",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Fonte = Csv.Document(File.Contents(\"C:\\Users\\Claiton\\Documents\\GitHub\\Conjunto de Dados Financeiros da Empresa\\data\\03_gold\\fato_financeiro.csv\"),[Delimiter=\",\", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"fato_financeiro_sk\", Int64.Type}, {\"produto_sk\", Int64.Type}, {\"geografia_sk\", Int64.Type}, {\"segmento_sk\", Int64.Type}, {\"desconto_sk\", type text}, {\"tempo_sk\", Int64.Type}, {\"unidades_vendidas\", Int64.Type}, {\"venda_liquida\", Int64.Type}, {\"custo_bens_vendidos\", Int64.Type}, {\"lucro\", Int64.Type}})\nin\n    #\"Tipo Alterado\""
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2026-02-19T03:54:54.52"
+          }
+        ]
+      },
+      {
+        "name": "Medidas Insights",
+        "lineageTag": "c7b9cca3-a378-4a3b-a67e-db4fcfa5a60f",
+        "modifiedTime": "2026-02-19T03:57:56.953333",
+        "structureModifiedTime": "2026-02-19T04:09:55.743333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2026-02-19T03:57:16.766667",
+            "structureModifiedTime": "2026-02-19T03:57:16.766667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:57:56.973333",
+              "refreshedTime": "2026-02-19T03:57:56.973333"
+            }
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Placeholder",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "sourceColumn": "[Placeholder]",
+            "lineageTag": "d9e09d57-efd7-4155-951c-c25cb6fbb8c0",
+            "modifiedTime": "2026-02-19T03:57:56.973333",
+            "structureModifiedTime": "2026-02-19T03:57:16.786667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2026-02-19T03:57:56.973333",
+              "refreshedTime": "2026-02-19T03:57:56.973333"
+            }
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Medidas Insights_part",
+            "state": "ready",
+            "modifiedTime": "2026-02-19T03:57:56.973333",
+            "refreshedTime": "2026-02-19T03:57:56.973333",
+            "source": {
+              "type": "calculated",
+              "expression": "ROW(\"Placeholder\", 1)"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Receita Total",
+            "description": "Soma da receita liquida total",
+            "expression": "SUM(fato_financeiro[receita_liquida])",
+            "formatString": "$#,##0.00",
+            "displayFolder": "1. KPIs Estrategicos",
+            "state": "semanticError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "A coluna ''receita_liquida'' na tabela ''fato_financeiro'' não pode ser encontrada ou não pode ser usada nesta expressão."
+          },
+          {
+            "name": "Lucro Total",
+            "description": "Soma do lucro total",
+            "expression": "SUM(fato_financeiro[lucro])",
+            "formatString": "$#,##0.00",
+            "displayFolder": "1. KPIs Estrategicos",
+            "dataType": "int64",
+            "modifiedTime": "2026-02-19T04:09:55.79",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333"
+          },
+          {
+            "name": "Margem Bruta %",
+            "description": "Margem bruta percentual (Lucro / Receita)",
+            "expression": "DIVIDE([Lucro Total], [Receita Total], 0)",
+            "formatString": "0.0%",
+            "displayFolder": "1. KPIs Estrategicos",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Unidades Vendidas",
+            "description": "Total de unidades vendidas",
+            "expression": "SUM(fato_financeiro[unidades_vendidas])",
+            "formatString": "#,##0",
+            "displayFolder": "1. KPIs Estrategicos",
+            "dataType": "int64",
+            "modifiedTime": "2026-02-19T04:09:55.79",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333"
+          },
+          {
+            "name": "Custo Total (CPV)",
+            "description": "Custo total dos produtos vendidos",
+            "expression": "SUM(fato_financeiro[custo_produtos_vendidos])",
+            "formatString": "$#,##0.00",
+            "displayFolder": "1. KPIs Estrategicos",
+            "state": "semanticError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "A coluna ''custo_produtos_vendidos'' na tabela ''fato_financeiro'' não pode ser encontrada ou não pode ser usada nesta expressão."
+          },
+          {
+            "name": "Ticket Medio",
+            "description": "Valor medio por unidade vendida",
+            "expression": "DIVIDE([Receita Total], [Unidades Vendidas], 0)",
+            "formatString": "$#,##0.00",
+            "displayFolder": "1. KPIs Estrategicos",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Crescimento MoM %",
+            "description": "Crescimento de receita mes a mes",
+            "expression": "VAR Atual = [Receita Total] VAR Anterior = CALCULATE([Receita Total], DATEADD(dim_tempo[data_completa], -1, MONTH)) RETURN DIVIDE(Atual - Anterior, Anterior, BLANK())",
+            "formatString": "0.0%",
+            "displayFolder": "2. Inteligencia Temporal",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Receita Acumulada Ano",
+            "description": "Receita acumulada no ano (YTD)",
+            "expression": "TOTALYTD([Receita Total], dim_tempo[data_completa])",
+            "formatString": "$#,##0.00",
+            "displayFolder": "2. Inteligencia Temporal",
+            "dataType": "int64",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Media Movel 3 Meses",
+            "description": "Media movel de receita (3 meses)",
+            "expression": "AVERAGEX(DATESINPERIOD(dim_tempo[data_completa], MAX(dim_tempo[data_completa]), -3, MONTH), [Receita Total])",
+            "formatString": "$#,##0.00",
+            "displayFolder": "2. Inteligencia Temporal",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Lucro Acumulado Ano",
+            "description": "Lucro acumulado no ano (YTD)",
+            "expression": "TOTALYTD([Lucro Total], dim_tempo[data_completa])",
+            "formatString": "$#,##0.00",
+            "displayFolder": "2. Inteligencia Temporal",
+            "dataType": "int64",
+            "modifiedTime": "2026-02-19T04:09:55.79",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333"
+          },
+          {
+            "name": "Ranking Receita por Pais",
+            "description": "Ranking de receita por pais",
+            "expression": "RANKX(ALL(dim_geografia[pais]), [Receita Total], , DESC, DENSE)",
+            "formatString": "0",
+            "displayFolder": "3. Performance Geografica",
+            "dataType": "int64",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Ranking Lucro por Pais",
+            "description": "Ranking de lucro por pais",
+            "expression": "RANKX(ALL(dim_geografia[pais]), [Lucro Total], , DESC, DENSE)",
+            "formatString": "0",
+            "displayFolder": "3. Performance Geografica",
+            "dataType": "int64",
+            "modifiedTime": "2026-02-19T04:09:55.79",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333"
+          },
+          {
+            "name": "Contribuicao do Pais %",
+            "description": "Participacao percentual do pais na receita",
+            "expression": "DIVIDE([Receita Total], CALCULATE([Receita Total], ALL(dim_geografia)), 0)",
+            "formatString": "0.0%",
+            "displayFolder": "3. Performance Geografica",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Participacao Segmento %",
+            "description": "Participacao do segmento na receita total",
+            "expression": "DIVIDE([Receita Total], CALCULATE([Receita Total], ALL(dim_segmento)), 0)",
+            "formatString": "0.0%",
+            "displayFolder": "4. Analise por Segmento",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Margem Lucro Segmento %",
+            "description": "Margem de lucro por segmento",
+            "expression": "DIVIDE([Lucro Total], [Receita Total], 0)",
+            "formatString": "0.0%",
+            "displayFolder": "4. Analise por Segmento",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Total Transacoes",
+            "description": "Numero total de transacoes",
+            "expression": "COUNTROWS(fato_financeiro)",
+            "formatString": "#,##0",
+            "displayFolder": "5. Diagnostico de Descontos",
+            "dataType": "int64",
+            "modifiedTime": "2026-02-19T04:09:55.79",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333"
+          },
+          {
+            "name": "Margem por Faixa Desconto",
+            "description": "Margem de lucro segmentada por faixa de desconto",
+            "expression": "DIVIDE([Lucro Total], [Receita Total], 0)",
+            "formatString": "0.0%",
+            "displayFolder": "5. Diagnostico de Descontos",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Alerta Desconto Alto",
+            "description": "Alerta quando margem com desconto alto cai abaixo de 10%",
+            "expression": "VAR M = CALCULATE([Margem Bruta %], dim_desconto[faixa_desconto] = \"High\") RETURN IF(M < 0.10, \"ALERTA: Margem critica\", \"OK\")",
+            "displayFolder": "5. Diagnostico de Descontos",
+            "dataType": "string",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Margem Bruta %]', que contém um erro."
+          },
+          {
+            "name": "Ranking Lucro Produto",
+            "description": "Ranking de produtos por lucro",
+            "expression": "RANKX(ALL(dim_produto[nome_produto]), [Lucro Total], , DESC, DENSE)",
+            "formatString": "0",
+            "displayFolder": "6. Analise de Produto",
+            "state": "semanticError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "A coluna ''nome_produto'' na tabela ''dim_produto'' não pode ser encontrada ou não pode ser usada nesta expressão."
+          },
+          {
+            "name": "Participacao Produto %",
+            "description": "Participacao do produto na receita total",
+            "expression": "DIVIDE([Receita Total], CALCULATE([Receita Total], ALL(dim_produto)), 0)",
+            "formatString": "0.0%",
+            "displayFolder": "6. Analise de Produto",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Margem vs Media",
+            "description": "Diferenca da margem do produto vs media geral",
+            "expression": "VAR Atual = [Margem Bruta %] VAR Media = CALCULATE([Margem Bruta %], ALL(dim_produto)) RETURN Atual - Media",
+            "formatString": "+0.0%;-0.0%",
+            "displayFolder": "6. Analise de Produto",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Margem Bruta %]', que contém um erro."
+          },
+          {
+            "name": "Categoria BCG",
+            "description": "Classificacao BCG do produto",
+            "expression": "VAR CM = [Margem Bruta %] VAR CV = [Unidades Vendidas] VAR AM = CALCULATE([Margem Bruta %], ALL(dim_produto)) VAR AV = CALCULATE([Unidades Vendidas], ALL(dim_produto)) RETURN SWITCH(TRUE(), CM > AM && CV > AV, \"Estrela\", CM > AM && CV <= AV, \"Vaca Leiteira\", CM <= AM && CV > AV, \"Interrogacao\", \"Abacaxi\")",
+            "displayFolder": "6. Analise de Produto",
+            "dataType": "string",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Margem Bruta %]', que contém um erro."
+          },
+          {
+            "name": "Indice Sazonalidade",
+            "description": "Indice de sazonalidade (1.0=media, >1=acima, <1=abaixo)",
+            "expression": "VAR MS = [Receita Total] VAR MED = DIVIDE(CALCULATE([Receita Total], ALL(dim_tempo[mes])), DISTINCTCOUNT(dim_tempo[mes]), 0) RETURN DIVIDE(MS, MED, 0)",
+            "formatString": "0.00",
+            "displayFolder": "7. Sazonalidade",
+            "dataType": "double",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          },
+          {
+            "name": "Melhor Trimestre",
+            "description": "Trimestre com melhor receita",
+            "expression": "VAR Q1 = CALCULATE([Receita Total], dim_tempo[trimestre] = 1) VAR Q2 = CALCULATE([Receita Total], dim_tempo[trimestre] = 2) VAR Q3 = CALCULATE([Receita Total], dim_tempo[trimestre] = 3) VAR Q4 = CALCULATE([Receita Total], dim_tempo[trimestre] = 4) VAR MX = MAX(MAX(Q1, Q2), MAX(Q3, Q4)) RETURN SWITCH(MX, Q1, \"T1\", Q2, \"T2\", Q3, \"T3\", Q4, \"T4\")",
+            "displayFolder": "7. Sazonalidade",
+            "dataType": "string",
+            "state": "dependencyError",
+            "modifiedTime": "2026-02-19T04:09:55.793333",
+            "structureModifiedTime": "2026-02-19T04:09:55.743333",
+            "errorMessage": "Essa expressão se refere a um objeto Measure nomeado 'Medidas Insights[Receita Total]', que contém um erro."
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "058fa293-96cc-4c42-90ba-6da2ed46ce96",
+        "fromTable": "dim_tempo",
+        "fromColumn": "data_completa",
+        "toTable": "LocalDateTable_97173e70-0320-4ec5-a7f1-cb66518ec2f1",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "state": "ready",
+        "modifiedTime": "2026-02-19T03:54:43.153333",
+        "refreshedTime": "2026-02-19T03:54:54.546667"
+      },
+      {
+        "name": "AutoDetected_f9edcbbf-f99a-4c17-bdbe-11574e7b1408",
+        "fromTable": "fato_financeiro",
+        "fromColumn": "geografia_sk",
+        "toTable": "dim_geografia",
+        "toColumn": "geografia_sk",
+        "state": "ready",
+        "modifiedTime": "2026-02-19T03:54:54.72",
+        "refreshedTime": "2026-02-19T03:54:54.72"
+      },
+      {
+        "name": "AutoDetected_2726994b-e428-4ada-8dfa-c04b9cb706f7",
+        "fromTable": "fato_financeiro",
+        "fromColumn": "produto_sk",
+        "toTable": "dim_produto",
+        "toColumn": "produto_sk",
+        "state": "ready",
+        "modifiedTime": "2026-02-19T03:54:54.72",
+        "refreshedTime": "2026-02-19T03:54:54.72"
+      },
+      {
+        "name": "AutoDetected_7b59a6a8-13cd-4dce-aaa1-d0e72775e11c",
+        "fromTable": "fato_financeiro",
+        "fromColumn": "segmento_sk",
+        "toTable": "dim_segmento",
+        "toColumn": "segmento_sk",
+        "state": "ready",
+        "modifiedTime": "2026-02-19T03:54:54.72",
+        "refreshedTime": "2026-02-19T03:54:54.72"
+      },
+      {
+        "name": "AutoDetected_f306909e-7db9-47b3-a6b6-d70987c6798c",
+        "fromTable": "fato_financeiro",
+        "fromColumn": "tempo_sk",
+        "toTable": "dim_tempo",
+        "toColumn": "tempo_sk",
+        "state": "ready",
+        "modifiedTime": "2026-02-19T03:54:54.72",
+        "refreshedTime": "2026-02-19T03:54:54.72"
+      }
+    ],
+    "cultures": [
+      {
+        "name": "pt-BR",
+        "modifiedTime": "2026-02-19T02:59:10.143333",
+        "structureModifiedTime": "2026-02-19T02:59:10.143333",
+        "linguisticMetadata": {
+          "content": {
+            "Version": "1.0.0",
+            "Language": "en-US"
+          },
+          "contentType": "json",
+          "modifiedTime": "2026-02-19T02:59:10.143333"
+        }
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1",
+        "modifiedTime": "2026-02-19T02:59:10.143333"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"dim_desconto\",\"dim_geografia\",\"dim_produto\",\"dim_segmento\",\"dim_tempo\",\"fato_financeiro\"]",
+        "modifiedTime": "2026-02-19T03:54:54.52"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]",
+        "modifiedTime": "2026-02-19T03:55:51.616667"
+      }
+    ]
+  }
+}

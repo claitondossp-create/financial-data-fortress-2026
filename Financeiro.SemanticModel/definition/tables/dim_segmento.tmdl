@@ -1,0 +1,40 @@
+table dim_segmento
+	lineageTag: 690015cd-2d49-427f-b646-6d7cd28bb271
+
+	column segmento_sk
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e78cfa9-b301-4d5c-b53e-ccedcc9a94f6
+		summarizeBy: none
+		sourceColumn: segmento_sk
+
+		annotation SummarizationSetBy = Automatic
+
+	column segmento_nome
+		dataType: string
+		lineageTag: c42c813d-722d-4bed-bac0-a4d3687154e1
+		summarizeBy: none
+		sourceColumn: segmento_nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column potencial_volume
+		dataType: string
+		lineageTag: aee16886-48de-4ced-af39-ab9d42118560
+		summarizeBy: none
+		sourceColumn: potencial_volume
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_segmento = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\Claiton\Documents\GitHub\Conjunto de Dados Financeiros da Empresa\data\03_gold\dim_segmento.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"segmento_sk", Int64.Type}, {"segmento_nome", type text}, {"potencial_volume", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+

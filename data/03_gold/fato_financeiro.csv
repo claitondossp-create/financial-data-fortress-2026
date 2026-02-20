@@ -1,4 +1,4 @@
-fato_financeiro_sk,produto_sk,geografia_sk,segmento_sk,desconto_sk,tempo_sk,unidades_vendidas,venda_liquida,custo_bens_vendidos,lucro
+fato_financeiro_sk,produto_sk,geografia_sk,segmento_sk,desconto_sk,tempo_sk,unidades_vendidas,receita_liquida,custo_produtos_vendidos,lucro
 1,1,1,1,,123,1618.5,32370.0,16185.0,16185.0
 2,1,2,1,,123,1321.0,26420.0,13210.0,13210.0
 3,1,3,2,,274,2178.0,32670.0,21780.0,10890.0
